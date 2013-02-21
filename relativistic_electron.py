@@ -1,22 +1,13 @@
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
 
-#c=open("relativistic_electron.csv", "rb")
-c=open("data.txt", "r")
-d=c.readlines()
-c.close()
-x=[]
-y=[]
-for line in d:
-    a=line.split()
-    print a
-    x.append(float(a[0]))
-    y.append(float(a[1]))
-    break
-print x,y
-plt.plot(x,y)
+field,counts, field2, counts2=np.loadtxt("data.txt", skiprows=0, unpack=True)
+print field
+plt.plot(field,counts, 'o-')
+plt.plot(field2,counts2, 'o-')
 plt.xlabel('B field (kG)')
-plt.ylabel('Counts/5 min')
+plt.ylabel('Counts/ 5 min')
 plt.show()
 
 #add error bars for B field
