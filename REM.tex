@@ -9,6 +9,8 @@
 \usepackage{amssymb}
 \usepackage{pgfplotstable}
 \usepackage{float}
+\usepackage{caption}
+\captionsetup[table]{justification=justified,singlelinecheck=false}
 \begin{document}
 
 \header {\today}							
@@ -137,8 +139,13 @@ The component is T-shaped and primarily made of metal with insets on both arms a
 \section{Conclusion}
 %Ekta & Brandon
 %remember to answer all 4 questions here
-\section{Appendix}
-Data tables and graphs.
+
+\begin{thebibliography}{99}
+\bibitem{electron}Sleator, Tycho, David Windt, and Burton Budick \begin{em}Relativistic Electron Momentum\end{em}. Experimental Physics. V85.0112. Fall, 2012.
+%Appendix
+\end{thebibliography}
+
+\newpage \LARGE{Appendix}\\
 \begin{table}[h!]
 \caption{Run 1}
 \begin{tabular}{|c|c|c|} \hline
@@ -174,7 +181,7 @@ Field	(kG)&	Counts	&	Error	\\	\hline
 2.0010	&	15	&	3.87	\\	\hline
 \end{tabular}
 \end{table}
-\begin{table}[h!]
+\begin{table}
 \caption{Run 2}
 \begin{tabular}{|c|c|c|} \hline
 Field	&	Counts	&	Error	\\ \hline
@@ -209,7 +216,7 @@ Field	&	Counts	&	Error	\\ \hline
 2.0019	&	16	&	4.00	\\ \hline
 \end{tabular}
 \end{table}
-\begin{table}[h!]
+\begin{table}
 \caption{Run 3}
 \begin{tabular}{|c|c|c|} \hline
 Field	&	Counts	&	Error	\\ \hline
@@ -244,7 +251,7 @@ Field	&	Counts	&	Error	\\ \hline
 2.0021	&	14	&	3.74	\\ \hline
 \end{tabular}
 \end{table}
-\begin{table}[h!]
+\begin{table}
 \caption{Run 4}
 \begin{tabular}{|c|c|c|} \hline
 Field (kG)	&	Counts	&	Error	\\ \hline
@@ -304,7 +311,7 @@ Field (kG)	&	Counts	&	Error	\\ \hline
 \includegraphics[width=7.5in]{field_counts.pdf}
 \end{center}
 \end{figure}
-%\pgfplotstabletypeset[columns={[index]0,[index]1}, precision=4]{data.txt}
-%Referenecs
-%Appendix
+
+
+
 \end{document}  

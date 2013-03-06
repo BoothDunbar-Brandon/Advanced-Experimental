@@ -3,6 +3,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
 import math
+import scipy
+
+def norm(x, mean, std):
+    norm=[]
+    for i in range(len(x)):
+        norm +=[(1.0/(std*np.sqrt(2*np.pi)))*np.exp(-(x[i] - mean)**2/(2*std**2))]
+#    print norm
+    return norm
 
 field,counts, field2, counts2, field3, counts3=np.loadtxt("data.txt", skiprows=0, unpack=True)
 field4, counts4= np.loadtxt("data2.txt", skiprows=0, unpack=True)
@@ -29,20 +37,48 @@ plt.title('Runs 1-3')
 plt.savefig('figure2.pdf')
 
 plt.figure(3)
+###starts run 4 stuff
 plt.plot(field4, counts4, 'b.')
 error=[]
 for count in counts4:
     x=math.sqrt(count)
     error.append(x)
-print error
+#print error
+print len(field4)
 plt.errorbar(field4,counts4,yerr=error,fmt=None)
+counts4=counts4[:27]
+field4=sorted(field4)[22:]
+print len(field4), counts4
+#assert(False)
+def model(t, coeffs):
+    return coeffs[0]+ coeffs[1]*np.exp(-((t-coeffs[2])/coeffs[3])**2)
+
+x0=np.array([17,120,1.67, 0.27],dtype=float)
+x=np.linspace(1.25,2.0,100)
+def residuals(coeffs,y,t):
+    return y-model(t,coeffs)
+
+from scipy.optimize import leastsq
+x, flag= leastsq(residuals,x0, args=(counts4,field4))
+print x, x0
+
+plt.plot(field4, model(field4,x))
 plt.xlabel('B field (kG)')
 plt.ylabel('Counts/ 5 min')
 plt.xlim(0.5,2.1)
 plt.title('Run 4')
 plt.savefig('figure3.pdf')
 
-plt.figure(4)
+#std1=counts4.std()
+#mean1=counts4.mean()
+#print mean1,std1
+#ynorm= norm(counts4, mean1, std1)
+#print ynorm, len(counts4), len(ynorm)
+# plt.figure(4)
+# plt.plot(field4,ynorm, '-')
+# plt.savefig('test_gauss.pdf')
+assert(False)
+
 avg_field=[]
 avg_count=[]
 for point in range(0,len(field)):
@@ -50,27 +86,34 @@ for point in range(0,len(field)):
     b=a/3
     avg_field.append(b)
     c=counts[point]+counts2[point]+counts3[point]
-    d=c/3
+    d=int(c/3)
     avg_count.append(d)
 
+plt.figure(4)
 plt.plot(avg_field, avg_count,'.', color='cyan')
 error=[]
 for count in avg_count:
     x=math.sqrt(count)
     error.append(x)
-print error
+
 plt.errorbar(avg_field,avg_count,yerr=error,fmt=None,ecolor='cyan')
 plt.xlabel('B field (kG)')
 plt.ylabel('Counts/ 5 min')
 plt.xlim(0.5,2.1)
 plt.title('Average Runs 1-3')
 plt.savefig('figure4.pdf')
-assert(False)
+
+
+std2=np.std(avg_count)
+mean2=np.mean(avg_count)
+print  mean2, std2
+
 counts4_bg=[]
-for point in range(0,len(field4)):
+for point in range(0,len(counts4)):
     x=counts4[point]-17.8
     counts4_bg.append(x)
 print counts4,counts4_bg
+
 
 plt.figure(5)
 plt.plot(field4, counts4_bg, 'b.')
