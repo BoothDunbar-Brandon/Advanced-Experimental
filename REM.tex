@@ -43,7 +43,7 @@ where $\gamma$ is:
 Therefore, total relativistic energy of a particle can be written as:
 \begin{equation} E=m_0c^2+KE=\gamma mc^2\end{equation}
 The first term of Equation 7 represents the rest-mass energy of the particle, which is an electron for the purpose of this lab. Relativistic energy is also commonly expressed in terms of momentum as given by Equation 8:
-\begin{equation}E^2=p^2c^2+m^2c^4\end{equation}
+\begin{equation}E^2=p^2c^2+m_0^2c^4\end{equation}
 \subsection{Momentum and Force}
 To measure the momentum of an electron in this experiment, we observe an externally applied magnetic field which can be varied. Recalling the Lorentz force when the velocity vector of a particle is perpendicular to the magnetic field, we have a magnetic force represented as:
 \begin{equation} F_{mag}=qvB. \end {equation}
@@ -87,11 +87,11 @@ Where R is the radius of the detector-source apparatus, which we have measured t
 Solving for B, we can estimate our magnetic fields needed to see electron pulses on the oscilloscope for each time an electron is counted:
 \begin{equation}B=\frac{\sqrt{(KE+mc^2)^2-m^2c^4}}{ce(.0290m)}\end{equation}
 Before solving for B, we must account for the energy lost by each electron due to the k-shell binding energy of Lead, which is $\sim$88keV:
-\begin{equation}KE_1=1.064MeV-0.088005MeV=0.975995\end{equation}
+\begin{equation}KE_1=1.064MeV-0.088005MeV=0.9760 MeV\end{equation}
 Now, we can substitute all of our values into equation 25 to obtain:
 \begin{equation} B_1=0.1606T=1.606kG\end{equation}
 For the second electron pulse:
-\begin{equation}KE_2=0.5689MeV-0.088005MeV=MeV\end{equation}
+\begin{equation}KE_2=0.5689MeV-0.088005MeV=0.4809MeV\end{equation}
 Once again, using equation 11:
 \begin{equation}B_2=0.0979T=0.979kG\end{equation}
 
@@ -107,7 +107,7 @@ It is also important to consider  that the electron loses energy as it travels i
  %Ref Fig
 
 Shows how the detector system is arranged.  From the detector a signal will first be boosted by a pre-amplifier before heading to the amplifier. Once at the amplifier the signal will be propogated not only to the single channel analyzer but also to the first channel of the  oscillascope.  Once at the single channel analyzer if the signal is large enough it will be propogated to the counter and the second channel of the oscillascope. If however the signal is not strong enough it will end at the single channel analyzer. Both the signal from the amplifier as well as the single channel analyzer are propogated to the oscilliscope to allow for visual confirmation of the signal.  
-\indent The only compenent that is non-standard is the source-detector component.  This compenent can be seen in
+\indent The only component that is non-standard is the source-detector component.  This component can be seen in
  
 % Ref Fig
 
@@ -123,7 +123,11 @@ The component is T-shaped and primarily made of metal with insets on both arms a
 
 
 \section{Results $\&$ Discussion}
-
+To observe the magnetic field of the peak in number of counts, we took four full runs of data throughout a range of 0.6 kG to 2.0 kG. During the first three runs, we repeated the same exact steps to take points in intervals of 0.05 kG. For the fourth data set, we decided to extend in smaller intervals around the magnetic field values for which we expected to see our peaks so that we could obtain a better curve fit. We added additional points around the values of the magnetic field near 1.0 kG and 1.6 kG, which can be seen in Run 4. For the purpose of comparing our experimental values with that of which we predicted before conducting the experiment, we choose to examine runs 1 and 4 of our data. Run 1 shows a fit in equally spaced intervals and Run 4 shows an extended data set near the predicted peaks in magnetic field strength. Runs 2 and 3 will not be discussed, but are provided in the appendix to show that those data sets are very similar to Run 1. \\
+\\
+In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\
+\\
+Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 3 explicitly and in the fits given in Figures 4 and 6. 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4 in]{run1_raw.png}
@@ -141,7 +145,7 @@ The component is T-shaped and primarily made of metal with insets on both arms a
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4 in]{run1_err_fit.png}
-\caption{Final fitting for Run 1 using two gaussians and a baselines based on the background counts.}
+\caption{Final fitting for Run 1 using two gaussians and a baseline based on the background counts.}
 \end{center}
 \end{figure}
 
@@ -152,7 +156,14 @@ The component is T-shaped and primarily made of metal with insets on both arms a
 \end{center}
 \end{figure}
 
-\begin{table}[htdp]
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run4_err_fit.png}
+\caption{Final fitting for Run 4 using two gaussians and a baseline based on the background counts.}
+\end{center}
+\end{figure}
+
+\begin{table}
 \begin{center}
 \caption{Results of Curve Fitting}
 \begin{tabular}{|c|c|c|c|c|}\hline
@@ -174,7 +185,7 @@ Since we have proved that both classical and relativistic momenta can be calcula
 \begin{equation} p_1=300(0.09564\pm0.01265 T)(0.0290\pm 0.0005m)=0.8321\pm0.1110 MeV/c\end{equation}
 \begin{equation} p_2=300(0.16522\pm0.00105 T)(0.0290\pm 0.0005m)=1.4374\pm0.0264 MeV/c\end{equation}\\
 The error on the calculation of momentum is determined by the properties of multiplication in error propagation:
-\begin{equation} \delta p= |p|\sqrt{(\frac{\delta r}{r})^2 + (\frac{\delta B}{B})^2}\end{equation}\\
+\begin{equation} \delta p= |p|\sqrt{(\frac{\delta R}{R})^2 + (\frac{\delta B}{B})^2}\end{equation}\\
 We can analyze the difference between our estimated and experimental values for momenta by calculation the percent errors: 
 \begin{equation} p_{1,error}=|\frac{1.4374-1.3970}{1.3970}|=0.0289\end{equation}
 \begin{equation} p_{1,\% error}= 2.89 \% \end{equation}
@@ -182,6 +193,19 @@ We can analyze the difference between our estimated and experimental values for 
 \begin{equation} p_{2,\% error}= 2.30 \% \end{equation}
 \subsection{Determining the Electron Mass}
 %e
+Rearranging Equation 8 given in the Theory section, we can solve for the rest mass of the electron using theoretical energy values and the momentum calculated directly above:
+\begin{equation} m_0=\sqrt{\frac{E^2-p^2c^2}{c^4}}\end{equation}
+It is important to remember here that E is the total energy of the particle in a particle energy state minus the binding energy, but including the rest mass energy of 0.511MeV, therefore \\$E_1=0.4809MeV+0.511MeV=0.9919MeV$ and $E_2=0.976MeV+0.511MeV=1.487MeV$. We can now find the rest mass using these values:
+\begin{equation} m_0{_1}=\sqrt{\frac{(0.9919MeV)^2-(0.8321MeV/c)^2}{c^4}}=0.5399\pm0.0720 MeV/c^2\end{equation}
+\begin{equation} m_0{_2}=\sqrt{\frac{(1.487MeV)^2-(1.4374MeV/c)^2}{c^4}}=0.3809\pm0.0070 MeV/c^2\end{equation}
+The error propagation here is determined by the multiplication rules:
+\begin{equation} \delta m= |m|\frac{\delta p}{p} \end {equation}
+
+Again, we can examine our calculations in comparison with the known rest mass of an electron of 0.511MeV by calculating a percent error:
+\begin{equation} m_{0,1,error}=|\frac{0.5399-0.511}{0.511}|=0.0565\end{equation}
+\begin{equation} m_{0,1,\%error}=5.65\%\end{equation}
+\begin{equation} m_{0,2,error}=|\frac{0.3809-0.511}{0.511}|=-0.2546\end{equation}
+\begin{equation} m_{0,2,\%error}=25.46\%\end{equation}
 \subsection{Experimental Line Width}
 %b
 \subsection {Energy Loss}
@@ -195,7 +219,7 @@ We can analyze the difference between our estimated and experimental values for 
 %Appendix
 \end{thebibliography}
 
-\newpage \LARGE{Appendix}\\
+\newpage \LARGE{Appendix}
 \begin{table}[h!]
 \caption{Run 1}
 \begin{tabular}{|c|c|c|} \hline
