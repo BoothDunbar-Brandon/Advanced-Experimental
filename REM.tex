@@ -10,7 +10,7 @@
 \usepackage{pgfplotstable}
 \usepackage{float}
 \usepackage{caption}
-\captionsetup[table]{justification=justified,singlelinecheck=false}
+\captionsetup[table]{justification=justified,singlelinecheck=false, position=bottom}
 \begin{document}
 
 \header {\today}							
@@ -126,16 +126,66 @@ The component is T-shaped and primarily made of metal with insets on both arms a
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=6 in]{figure3.pdf}
+\includegraphics[width=4 in]{run1_raw.png}
+\caption{Run 1 of data at equal intervals of magnetic field. Each data set was taken in magnetic field steps of 0.05 kG.This data includes the counts from background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts at each value for magnetic field. }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run1_all.png}
+\caption{Fitting for Run 1 of data at equal intervals of magnetic field. The two gaussian curves are centered at the peaks of counts. A baseline of the average background counts is also included. The red dashed line shows the sum of the three curves.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run1_err_fit.png}
+\caption{Final fitting for Run 1 using two gaussians and a baselines based on the background counts.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run4_raw.png}
 \caption{Run 4 of data with extra points taken in smaller magnetic field steps near the theoretical peaks. This data includes the counts from background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts at each value for magnetic field.}
 \end{center}
 \end{figure}
-\begin{figure}[H]
+
+\begin{table}[htdp]
 \begin{center}
-\includegraphics[width=6 in]{figure4.pdf}
-\caption{The results of the average  of first three runs of data. Each data set was taken in magnetic field steps of 0.05 kG.This data includes the counts from background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts at each value for magnetic field. }
+\caption{Results of Curve Fitting}
+\begin{tabular}{|c|c|c|c|c|}\hline
+&$Peak_1$(kG) &$\sigma_1$(kG)&$Peak_2$(kG) &$\sigma_2$(kG)  \\ \hline
+Run 1 &0.9307$\pm$0.1251 & 0.3590$\pm$0.22 & 1.6558$\pm$0.0097 &0.1126$\pm$0.0119 \\ \hline
+Run 4 &0.9820$\pm$0.0189 &0.1212$\pm$0.0273 &1.6485$\pm$0.0039 &0.0910$\pm$0.0055\\ \hline
+Average &0.9564$\pm$0.1265 &0.2401$\pm$0.2217 &1.6522$\pm$0.0105 &0.1018$\pm$0.0131 \\ \hline
+\end{tabular}
 \end{center}
-\end{figure}
+\end{table}%
+
+To calculate the error in the averages given above, the propagation for adding quantities is utilized:
+\begin{equation} \delta z=\sqrt{(\delta z_1)^2 + (\delta z_2)^2} \end {equation}
+
+\subsection{Calculation of Momentum}
+%e
+Since we have proved that both classical and relativistic momenta can be calculated with the same formula, we can use the following equation along with our average values of the peaks of our fit curves to determine experimental momenta:
+\begin{equation} p=300BR\end{equation}
+\begin{equation} p_1=300(0.09564\pm0.01265 T)(0.0290\pm 0.0005m)=0.8321\pm0.1110 MeV/c\end{equation}
+\begin{equation} p_2=300(0.16522\pm0.00105 T)(0.0290\pm 0.0005m)=1.4374\pm0.0264 MeV/c\end{equation}\\
+The error on the calculation of momentum is determined by the properties of multiplication in error propagation:
+\begin{equation} \delta p= |p|\sqrt{(\frac{\delta r}{r})^2 + (\frac{\delta B}{B})^2}\end{equation}\\
+We can analyze the difference between our estimated and experimental values for momenta by calculation the percent errors: 
+\begin{equation} p_{1,error}=|\frac{1.4374-1.3970}{1.3970}|=0.0289\end{equation}
+\begin{equation} p_{1,\% error}= 2.89 \% \end{equation}
+\begin{equation} p_{2,error}=|\frac{0.8321-0.8517}{0.8517}|=-0.0230\end{equation}
+\begin{equation} p_{2,\% error}= 2.30 \% \end{equation}
+\subsection{Determining the Electron Mass}
+%e
+\subsection{Experimental Line Width}
+%b
+\subsection {Energy Loss}
+%b
 \section{Conclusion}
 %Ekta & Brandon
 %remember to answer all 4 questions here
@@ -304,13 +354,15 @@ Field (kG)	&	Counts	&	Error	\\ \hline
 0.7020	&	28	&	5.29	\\ \hline
 0.6498	&	20	&	4.47	\\ \hline
 0.6004	&	26	&	5.10	\\ \hline
+
 \end{tabular}
 \end{table}
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=7.5in]{field_counts.pdf}
-\end{center}
-\end{figure}
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=7.5in]{field_counts.pdf}
+%\end{center}
+%\end{figure}
 
 
 
