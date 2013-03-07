@@ -53,26 +53,27 @@ A magnetic force applied perpendicular to the velocity vector of the electron wi
 \begin{equation} F_c=\frac{mv^2}{R}\end{equation}
 \begin{equation} evB=\frac{mv^2}{R}.\end {equation}
 Substituting the Newtonian equation of momentum, $p=mv$, yields:
-
+\begin{equation}p=eBR,\end{equation}
 To make this relation easier to work with, magnetic field is measured in Tesla($1x10^4$ Gauss), radius is measured in meters, and momentum is expressed in units of MeV/c. Substituting the value of an elementary charge and converting to these units transforms Equation 13 to:
 \begin{equation} p=300BR\end{equation}
-We have derived the expression for momentum is a purely classical way, however, in our experiment, the electrons are moving extremely close to the speed of light so we must validate that this relation for momentum still holds true under relativistic conditions.
+We have derived the expression for momentum in a purely classical way, however, in our experiment, the electrons are moving extremely close to the speed of light so we must validate that this relation for momentum still holds true under relativistic conditions.
 \\
 \\
-The magnetic field hold true under relativistic conditions in this experiment because it is independent of the magnitude of the velocity of the particles. Therefore, the magnetic force is still given by Equation 10. The centripetal force, however, will vary in accordance with the velocity. 
+The magnetic field holds true under relativistic conditions in this experiment because it is independent of the magnitude of the velocity of the particles. Therefore, the magnetic force is still given by Equation 10. The centripetal force, however, will vary in accordance with the velocity. 
 \begin {equation} F_c=\frac{dp}{dt}=\frac{d(\gamma mv)}{dt}=\gamma ma. \end{equation}The acceleration is equal to $v^2/R$, yielding:
-\begin{equation}F_c=\frac{\gamma mv^2}{R}.\end{equation} Equation equations 10 and 16 and  recalling the equation for relativistic momentum given by Equation 5:
+\begin{equation}F_c=\frac{\gamma mv^2}{R}.\end{equation} Equating equations 10 and 16 and  recalling the equation for relativistic momentum given by Equation 5:
 \begin{equation}p=eBR,\end{equation} which can also be written as \begin{equation} p=300BR.\end{equation} Therefore, we can conclude that the both the classical and relativistic equations of motion result in the same expression for momentum. We can use this result to find the values for a magnetic field that gives the highest count rate to calculate and electron's momentum and energy. 
 
 \subsection{Determining Peak Magnetic Fields}
 We use a $^{207}$Bi source, which emits relativistic electrons in the process of changing $^{207}$Bi into an excited state of a $^{207}$Pb nucleus. When $^{207}$Pb decays to a lower energy state, it ejects an electron from the atom. The following figure shows the changes in energy states from the original source of $^{207}$Bi to $^{207}$Pb. \\
-\begin{figure}
+\\
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=4in]{energylevels.png}
 \caption{Transitions of $^{207}$Bi}
 \end{center}
-\end{figure}
-In the first energy conversion, an electron goes from having 1.6334MeV to 0.5698MeV and in the second drop it moves from an energy state with 0.5698MeV to being ejected from the atom where it is no longer bound to an energy state. Thus, $\Delta KE_1=1.064$ MeV and $\Delta KE_2= 0.5698$MeV. \\
+\end{figure}\\
+In the first energy conversion, an electron goes from having 1.6334 MeV to 0.5698 MeV and in the second drop it moves from an energy state with 0.5698MeV to being ejected from the atom where it is no longer bound to an energy state. Thus, $\Delta KE_1=1.064$ MeV and $\Delta KE_2= 0.5698$ MeV. \\
 \\
 Since we know the values for the changes in kinetic energies between energy states, we can solve for relativistic momentum in terms of values that we know:
 \begin{equation}KE+mc^2=\sqrt{p^2c^2+m^2c^4}\end{equation}
@@ -96,8 +97,8 @@ Once again, using equation 11:
 \begin{equation}B_2=0.0979T=0.979kG\end{equation}
 
 It is also important to consider  that the electron loses energy as it travels in the air from the source to the detector. Since we cannot quantify this loss in energy, we must account for it qualitatively while analyzing our  experimental results. With theoretical values for the magnetic fields, we can determine theoretical values for momentum, which we can compare to our results:
-\begin{equation}p_1=300RB=300(.0290m)(0.1606T)=1.397 m\cdot T\end{equation}
-\begin{equation}p_2=300RB=300(.0290m)(0.0979T)=0.8517 m\cdot T\end{equation}
+\begin{equation}p_1=300RB=300(.0290m)(0.1606T)=1.397 MeV/c\end{equation}
+\begin{equation}p_2=300RB=300(.0290m)(0.0979T)=0.8517 MeV/c\end{equation}
 
 \section{Experimental Methods}
 %Brandon
@@ -125,7 +126,7 @@ The component is T-shaped and primarily made of metal with insets on both arms a
 \section{Results $\&$ Discussion}
 To observe the magnetic field of the peak in number of counts, we took four full runs of data throughout a range of 0.6 kG to 2.0 kG. During the first three runs, we repeated the same exact steps to take points in intervals of 0.05 kG. For the fourth data set, we decided to extend in smaller intervals around the magnetic field values for which we expected to see our peaks so that we could obtain a better curve fit. We added additional points around the values of the magnetic field near 1.0 kG and 1.6 kG, which can be seen in Run 4. For the purpose of comparing our experimental values with that of which we predicted before conducting the experiment, we choose to examine runs 1 and 4 of our data. Run 1 shows a fit in equally spaced intervals and Run 4 shows an extended data set near the predicted peaks in magnetic field strength. Runs 2 and 3 will not be discussed, but are provided in the appendix to show that those data sets are very similar to Run 1. \\
 \\
-In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\
+In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\
 \\
 Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 3 explicitly and in the fits given in Figures 4 and 6. 
 \begin{figure}[H]
