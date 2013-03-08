@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <defs/>
+    <g>
+        <g latexdraw:type="drawing" id="id512">
+            <g latexdraw:type="drawing" id="id513">
+                <g latexdraw:type="square" id="id514">
+                    <rect x="789.0" y="78.0" width="94.0" height="94.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#92a994"/>
+                </g>
+                <g latexdraw:type="line" id="id515">
+                    <line x1="840.0" x2="840.0" y1="172.0" y2="221.0"
+                        stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="rectangle" id="id516">
+                    <rect x="832.0" y="221.0" width="18.0" height="20.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#f59d9d"/>
+                </g>
+                <g latexdraw:type="text" id="id517" font-family="Dialog"
+                    fill="black" font-size="18" latexdraw:x="761.0">
+                    <text x="761.0" y="65.0"><![CDATA[Detector/Source]]></text>
+                </g>
+                <g latexdraw:type="text" id="id519" font-family="Dialog"
+                    fill="black" font-size="18" latexdraw:x="861.0">
+                    <text x="861.0" y="238.0"><![CDATA[Pre-Amplifier]]></text>
+                </g>
+                <g latexdraw:type="line" id="id521">
+                    <line x1="833.0" x2="510.0" y1="233.0" y2="234.0"
+                        stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="square" id="id522">
+                    <rect x="470.0" y="216.0" width="39.0" height="39.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#fd5047"/>
+                </g>
+                <g latexdraw:type="text" id="id523" font-family="Dialog"
+                    fill="black" font-size="18" latexdraw:x="380.0">
+                    <text x="380.0" y="242.0"><![CDATA[Amplifier]]></text>
+                </g>
+                <g latexdraw:type="joinedLines" id="id525">
+                    <polyline
+                        points="499.0,218.0 499.0,191.0 559.0,191.0 "
+                        stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="line" id="id528">
+                    <line x1="482.0" x2="482.0" y1="217.0" y2="142.0"
+                        stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="square" id="id529">
+                    <rect x="467.0" y="104.0" width="39.0" height="39.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#8396e9"/>
+                </g>
+                <g latexdraw:type="line" id="id530">
+                    <line x1="482.0" x2="482.0" y1="105.0" y2="67.0"
+                        stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="square" id="id531">
+                    <rect x="469.0" y="41.0" width="27.0" height="27.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0b42dd"/>
+                </g>
+                <g latexdraw:type="joinedLines" id="id532">
+                    <polyline
+                        points="507.0,131.0 579.0,130.0 579.0,154.0 579.0,154.0 580.0,155.0 "
+                        stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="square" id="id535">
+                    <rect x="559.0" y="156.0" width="43.0" height="43.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#dacc5c"/>
+                </g>
+                <g latexdraw:type="text" id="id536" font-family="Dialog"
+                    fill="black" font-size="18" latexdraw:x="248.0">
+                    <text x="248.0" y="130.0"><![CDATA[Single Channel Analyzer]]></text>
+                </g>
+                <g latexdraw:type="text" id="id538" font-family="Dialog"
+                    fill="black" font-size="18" latexdraw:x="611.0">
+                    <text x="611.0" y="183.0"><![CDATA[Oscillascope]]></text>
+                </g>
+                <g latexdraw:type="text" id="id540" font-family="Dialog"
+                    fill="black" font-size="18" latexdraw:x="384.0">
+                    <text x="384.0" y="61.0"><![CDATA[Counter]]></text>
+                </g>
+                <g latexdraw:type="triangle" id="id542"
+                    latexdraw:points="656.0 229.0 673.0 229.0 656.0 237.0 673.0 237.0" transform="rotate(270.535088437724) translate(-891.2841273261107 433.64699023766275)">
+                    <polygon
+                        points="664.5,230.37325 670.6515,236.0 658.3485,236.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0a0000"/>
+                </g>
+                <g latexdraw:type="triangle" id="id543" latexdraw:points="473.0 178.0 490.0 178.0 473.0 186.0 490.0 186.0">
+                    <polygon
+                        points="481.5,179.37325 487.65146,185.0 475.34854,185.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0a0000"/>
+                </g>
+                <g latexdraw:type="triangle" id="id544"
+                    latexdraw:points="832.0 194.0 849.0 194.0 832.0 202.0 849.0 202.0" transform="rotate(-180.0) translate(-1681.0 -395.9999999999999)">
+                    <polygon
+                        points="840.5,195.37325 846.6515,201.0 834.3485,201.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0a0000"/>
+                </g>
+                <g latexdraw:type="triangle" id="id545"
+                    latexdraw:points="524.0 187.0 541.0 187.0 524.0 195.0 541.0 195.0" transform="rotate(87.0090309502307) translate(-313.9751068090338 -712.8085099496527)">
+                    <polygon
+                        points="532.5,188.37325 538.6515,194.0 526.3485,194.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0a0000"/>
+                </g>
+                <g latexdraw:type="triangle" id="id546"
+                    latexdraw:points="525.0 127.0 542.0 127.0 525.0 135.0 542.0 135.0" transform="rotate(87.23581343815154) translate(-376.92414715678393 -657.5617269669526)">
+                    <polygon
+                        points="533.5,128.37325 539.6515,134.0 527.3485,134.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0a0000"/>
+                </g>
+                <g latexdraw:type="triangle" id="id547" latexdraw:points="473.0 83.0 490.0 83.0 473.0 91.0 490.0 91.0">
+                    <polygon
+                        points="481.5,84.37325 487.65146,90.0 475.34854,90.0"
+                        latexdraw:borderPos="outer" stroke-width="2.0"
+                        stroke="black" fill="#0a0000"/>
+                </g>
+            </g>
+            <g latexdraw:type="text" id="id549" font-family="Dialog"
+                fill="black" font-size="18" latexdraw:x="566.0">
+                <text x="566.0" y="31.0"><![CDATA[\psframebox[linewidth=0.04]{Detector System}]]></text>
+            </g>
+        </g>
+    </g>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:displayBorders>false</latexdraw:displayBorders>
+            <latexdraw:autoAdjust>true</latexdraw:autoAdjust>
+            <latexdraw:ppc>50</latexdraw:ppc>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:unit>cm</latexdraw:unit>
+            <latexdraw:classicGrid>false</latexdraw:classicGrid>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:code>0</latexdraw:code>
+            <latexdraw:displayGrid>true</latexdraw:displayGrid>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:autoUpdate>true</latexdraw:autoUpdate>
+            <latexdraw:version>2.0.8</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1377</latexdraw:width>
+                <latexdraw:height>904</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>64</latexdraw:x>
+                <latexdraw:y>0</latexdraw:y>
+            </latexdraw:position>
+            <latexdraw:dividerPosition>0.8678286129266521</latexdraw:dividerPosition>
+            <latexdraw:displayCodePanel>true</latexdraw:displayCodePanel>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:delimitorOpacity>130</latexdraw:delimitorOpacity>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

@@ -1,0 +1,486 @@
+
+
+%\documentclass[11pt, oneside]{article}   	
+%\usepackage{geometry}    
+%\geometry{letterpaper}                 		
+\input preamble.tex
+\newcommand{\ig}[2][width=4in]{\includegraphics[#1]{#2}}    		
+\usepackage{graphicx}					
+\usepackage{amssymb}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup[table]{justification=justified,singlelinecheck=false, position=bottom}
+\begin{document}
+
+\header {\today}							
+\title{Relativistic Electron Momentum}
+\author{Ekta Patel \& Brandon Booth-Dunbar}
+
+
+
+\section{Abstract}
+\begin{em}
+The goal of this lab is to find the momentum of relativistic electrons that are emitted from the decay of the radioactive source Bismuth-207.  By placing the source in an adjustable uniform magnetic field we are  able to direct the electrons in a semicircular arc towards a detector.  By finding the magnetic field strength which maximizes the number of electrons that reach the source we can find the most common energy of emission from which one can calculate the relativistic  momentum and mass using a combination of newtonian and relativistic mechanics. 
+\end{em}
+
+\section{Intro}
+This lab explores one of the most easily accessible expressions of relativistic phenomena. The electron is both substantially charged and has mass which makes detection and focusing much  easier than when dealing with more slippery subatomic  atomic particles that are unstable or peculiar.  Since the particle is charged the natural focusing tool is a magnetic field since the electron and the field interact in a very well defined way. The cyclotron motion of linearly discharged electrons in a uniform magnetic field is in fact the basis for this experiment and is key in the design and development of the procedures used. Additionally, the fact that the electron has mass allows us to access concepts such as rest mass energy as well as the derivation of its rest mass from both classical and relativistic mechanics using the properties of circular motion.  
+
+\section{Theory}
+
+\subsection{Energy}
+In Newtonian mechanics, kinetic energy and momentum are given by the following equations of motion:
+\begin{equation}KE= \frac{1}{2}mv^2 \end{equation}
+\begin{equation} p=mv \end{equation}
+\begin {equation}KE=\frac{p^2}{2m} \end{equation}
+
+However, when dealing with particles that are moving at the speed of light, relativistic motion must be considered. When the velocity of a particle,v, approaches the speed of light, c, the equations for energy and momentum become:
+\begin{equation} E=\gamma mc^2\end{equation}
+\begin{equation} p=\gamma mv\end{equation}
+where $\gamma$ is:
+\begin{equation} \gamma= \frac{1}{\sqrt{1-(\frac{v}{c})^2}}\end{equation}
+Therefore, total relativistic energy of a particle can be written as:
+\begin{equation} E=m_0c^2+KE=\gamma mc^2\end{equation}
+The first term of Equation 7 represents the rest-mass energy of the particle, which is an electron for the purpose of this lab. Relativistic energy is also commonly expressed in terms of momentum as given by Equation 8:
+\begin{equation}E^2=p^2c^2+m_0^2c^4\end{equation}
+\subsection{Momentum and Force}
+To measure the momentum of an electron in this experiment, we observe an externally applied magnetic field which can be varied. Recalling the Lorentz force when the velocity vector of a particle is perpendicular to the magnetic field, we have a magnetic force represented as:
+\begin{equation} F_{mag}=qvB. \end {equation}
+Since we are observing the trajectory of an electron, $q$ can be replaced with the elementary charge, $e$: 
+\begin{equation} F_{mag}=evB.\end{equation}
+A magnetic force applied perpendicular to the velocity vector of the electron will cause it to be deflected into a circular trajectory from the source, through the slit and into the detector of the apparatus. A relationship between the magnetic field and the momentum of the electron can then be developed by equating the magnetic force of the electron with the centripetal motion of the particle,$F_{mag}=F_c$:
+\begin{equation} F_c=\frac{mv^2}{R}\end{equation}
+\begin{equation} evB=\frac{mv^2}{R}.\end {equation}
+Substituting the Newtonian equation of momentum, $p=mv$, yields:
+\begin{equation}p=eBR,\end{equation}
+To make this relation easier to work with, magnetic field is measured in Tesla($1x10^4$ Gauss), radius is measured in meters, and momentum is expressed in units of MeV/c. Substituting the value of an elementary charge and converting to these units transforms Equation 13 to:
+\begin{equation} p=300BR\end{equation}
+We have derived the expression for momentum in a purely classical way, however, in our experiment, the electrons are moving extremely close to the speed of light so we must validate that this relation for momentum still holds true under relativistic conditions.
+\\
+\\
+The magnetic field holds true under relativistic conditions in this experiment because it is independent of the magnitude of the velocity of the particles. Therefore, the magnetic force is still given by Equation 10. The centripetal force, however, will vary in accordance with the velocity. 
+\begin {equation} F_c=\frac{dp}{dt}=\frac{d(\gamma mv)}{dt}=\gamma ma. \end{equation}The acceleration is equal to $v^2/R$, yielding:
+\begin{equation}F_c=\frac{\gamma mv^2}{R}.\end{equation} Equating equations 10 and 16 and  recalling the equation for relativistic momentum given by Equation 5:
+\begin{equation}p=eBR,\end{equation} which can also be written as \begin{equation} p=300BR.\end{equation} Therefore, we can conclude that the both the classical and relativistic equations of motion result in the same expression for momentum. We can use this result to find the values for a magnetic field that gives the highest count rate to calculate and electron's momentum and energy. 
+
+\subsection{Determining Peak Magnetic Fields}
+We use a $^{207}$Bi source, which emits relativistic electrons in the process of changing $^{207}$Bi into an excited state of a $^{207}$Pb nucleus. When $^{207}$Pb decays to a lower energy state, it ejects an electron from the atom. The following figure shows the changes in energy states from the original source of $^{207}$Bi to $^{207}$Pb. \\
+\\
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=4in]{energylevels.png}
+\caption{Transitions of $^{207}$Bi}
+\end{center}
+\end{figure}\\
+In the first energy conversion, an electron goes from having 1.6334 MeV to 0.5698 MeV and in the second drop it moves from an energy state with 0.5698MeV to being ejected from the atom where it is no longer bound to an energy state. Thus, $\Delta KE_1=1.064$ MeV and $\Delta KE_2= 0.5698$ MeV. \\
+\\
+Since we know the values for the changes in kinetic energies between energy states, we can solve for relativistic momentum in terms of values that we know:
+\begin{equation}KE+mc^2=\sqrt{p^2c^2+m^2c^4}\end{equation}
+\begin{equation}(KE+mc^2)^2=p^2c^2+m^2c^4\end{equation}
+\begin{equation}(KE+mc^2)^2-m^2c^4=p^2c^2\end{equation}
+\begin{equation}\frac{(KE+mc^2)^2-m^2c^4}{c^2}=p^2\end{equation}
+\begin{equation}\frac{p=\sqrt{(KE+mc^2)^2-m^2c^4}}{c}\end{equation}
+We have proved:
+\begin{equation}p=eRB\end{equation}
+Where R is the radius of the detector-source apparatus, which we have measured to be .0290m:
+\begin{equation}\frac{p=\sqrt{(KE+mc^2)^2-m^2c^4}}{c}=eB(.0290m)\end{equation}
+Solving for B, we can estimate our magnetic fields needed to see electron pulses on the oscilloscope for each time an electron is counted:
+\begin{equation}B=\frac{\sqrt{(KE+mc^2)^2-m^2c^4}}{ce(.0290m)}\end{equation}
+Before solving for B, we must account for the energy lost by each electron due to the k-shell binding energy of Lead, which is $\sim$88keV:
+\begin{equation}KE_1=1.064MeV-0.088005MeV=0.9760 MeV\end{equation}
+Now, we can substitute all of our values into equation 25 to obtain:
+\begin{equation} B_1=0.1606T=1.606kG\end{equation}
+For the second electron pulse:
+\begin{equation}KE_2=0.5689MeV-0.088005MeV=0.4809MeV\end{equation}
+Once again, using equation 11:
+\begin{equation}B_2=0.0979T=0.979kG\end{equation}
+
+It is also important to consider  that the electron loses energy as it travels in the air from the source to the detector. We quantify this loss of energy in section 5.4. With theoretical values for the magnetic fields, we can determine theoretical values for momentum, which we can compare to our results:
+\begin{equation}p_1=300RB=300(.0290m)(0.1606T)=1.397 MeV/c\end{equation}
+\begin{equation}p_2=300RB=300(.0290m)(0.0979T)=0.8517 MeV/c\end{equation}
+
+\section{Experimental Methods}
+%Brandon
+\subsection{Apparatus}
+The apparatus consists of two independent component systems: the detector system and the magnetic field system which are adjusted and calibrated separately.  The detector system consists of a source/detector component, a pre-amplifier, the amplifier, single channel analyzer, oscilloscope, and finally, the adjustable counter.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{REM-figures.pdf}
+\caption{Detector system with signal direction.}
+\end{center}
+\end{figure}
+
+Figure 2 shows how the detector system is arranged.  From the detector a signal will first be boosted by a pre-amplifier before heading to the amplifier. Once at the amplifier the signal will be propagated not only to the single channel analyzer but also to the first channel of the  oscilloscope.  Once at the single channel analyzer if the signal is large enough it will be propagated to the counter and the second channel of the oscilloscope. If however the signal is not strong enough it will end at the single channel analyzer. Both the signal from the amplifier as well as the single channel analyzer are propagated to the oscilloscope to allow for visual confirmation of the signal.  
+The only component that is non-standard is the source-detector component.  This component can be seen below in Figure 3.
+ 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{REM-figures2.pdf}
+\caption{Source component with geometry of electron arc.}
+\end{center}
+\end{figure}
+
+The component is T-shaped and primarily made of metal with insets on both arms as well as a slit in the middle post.  In one inset there the $^{207}Bi$ source shielded by a lead plate on the underside and in the other inset is the detector with a male hookup on the underside.  The size of our slits as well as their relative distance between them  determine the radius of the arc the electron must traverse to be emitted and detected. The relevant distances are labeled on the figure with r equal to 0.0290 m $\pm$0 .0005 m and L equal to twice the radius.  It should be noted that a range of radii will be allowed through the slit because of its width but for the majority of our calculations we use the radius which is halfway between the highest and lowest arc. Section 5.3 will address this issue. 
+
+The magnetic field system is simple, consisting of an adjustable power supply unit, cooling system, gaussmeter, and probe which can be seen in the figure below. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{REM-figures3.pdf}
+\caption{Magnetic field system.}
+\end{center}
+\end{figure}
+
+\subsection{Procedure}
+
+\subsubsection{Calibration}
+The calibration of the apparatus is the most detail sensitive step in the experiment.  When calibrating the detector system if you set the amplifier too high or the single channel analyzer too low you will get very large background counts from the sensor and will not reliably be able to detect the peaks of electron emission from the $Bi²⁰⁷$ source.  On the other hand if the discriminator is set too high or the amplifier to low you will not get enough counts to clearly define a peak when you perform your measurements. Given the two ways with which you can raise or lower the number of counts from the detector it is best to choose a setting for either the amplifier or the single channel analyzer and then focus on adjusting only one of the settings.  We chose to leave the amplifier at a coarse grain of 20 and a fine grain of 9.5 and then adjusted the single channel analyzer.  This was done in part because the detector system records hundreds of false counts any time the amplifier settings are adjusted while the single channel analyzer can be adjusted without registering any false counts. To perform the calibration we placed an additional $Bi²⁰⁷$ source directly over the detector and performed 60 second counts while increasing the threshold of the single channel analyzer. By watching the oscilloscope you can increase the analyzer to the maximum level before it begins to veto signals from actual electrons hitting the detector. At this point you will detect electrons from your source but will measure a limited number of false counts due to background and dark noise sources.  We found this level to be a change in energy of 6.2 V.  While the lab manual asks for a change in energy of 10-12 V the value is dependent on the amplifier settings and the lab manual does not specify what amplifier settings this corresponds to making this recommendation useless.
+
+In addition to the calibration of the detector system you must also calibrate the gaussmeter to ensure that it is not only entirely perpendicular to the field but also zeroed correctly.  The probe of the gaussmeter can be correctly calibrated by placing it in the zeroing chamber each time the machine is turned on. Then you can rotate the probe once it is in the magnetic field to find the position at which it is perpendicular and is recording the true value of the field. If it is not in the right position you will record a magnetic field strength that is less than the actual value.  
+
+\subsubsection{Data Taking}
+
+The procedure for data taking is fairly simple once the required calibration has been performed.  The magnets and cooling system must be turned on a minimum of 2 hours before you are to start your data run.  This allows for the magnets to not only reach a uniform temperature but also will decrease their temperature making the magnetic field more stable. Additionally, if you begin to take data before the magnets reach an equilibrium temperature and polarization the data at the start of the run will be more variable than the data at the end of the run. Heteroskedasticity will then cause issues when fitting the data. After allowing the magnets to ``warm up'' you must choose an interval and a range for your runs.  We chose 5 minute time intervals in which we took counts from 0.6 kG to 2.0 kG in varying increments for the magnetic field.  The only cautionary statement is that you must take a complete data run, you can not stop halfway through your range and try to continue after the magnets have been turned off and re-calibrated. It is also prudent to note that the sensor is light sensitive and should be shielded from lights used in the room at all times during data taking. 
+
+\section{Results $\&$ Discussion}
+To observe the magnetic field of the peak in number of counts, we took four full runs of data throughout a range of 0.6 kG to 2.0 kG. During the first three runs, we repeated the same exact steps to take points in intervals of 0.05 kG. For the fourth data set, we decided to extend in smaller intervals around the magnetic field values for which we expected to see our peaks so that we could obtain a better curve fit. We added additional points around the values of the magnetic field near 1.0 kG and 1.6 kG, which can be seen in Run 4. For the purpose of comparing our experimental values with that of which we predicted before conducting the experiment, we choose to examine runs 1 and 4 of our data. Run 1 shows a fit in equally spaced intervals and Run 4 shows an extended data set near the predicted peaks in magnetic field strength. Runs 2 and 3 will not be discussed, but are provided in the appendix to show that those data sets are very similar to Run 1. \\
+\\
+In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\
+\\
+Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 6 explicitly and in the fits given in Figures 7 and 9. 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run1_raw.png}
+\caption{Run 1 of data at equal intervals of magnetic field. Each data set was taken in magnetic field steps of 0.05 kG.This data includes the counts from background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts at each value for magnetic field. }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run1_all.png}
+\caption{Fitting for Run 1 of data at equal intervals of magnetic field. The two gaussian curves are centered at the peaks of counts. A baseline of the average background counts is also included. The red dashed line shows the sum of the three curves.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run1_err_fit.png}
+\caption{Final fitting for Run 1 using two gaussians and a baseline based on the background counts.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run4_raw.png}
+\caption{Run 4 of data with extra points taken in smaller magnetic field steps near the theoretical peaks. This data includes the counts from background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts at each value for magnetic field.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4 in]{run4_err_fit.png}
+\caption{Final fitting for Run 4 using two gaussians and a baseline based on the background counts.}
+\end{center}
+\end{figure}
+
+\begin{table}
+\begin{center}
+\caption{Results of Curve Fitting}
+\begin{tabular}{|c|c|c|c|c|}\hline
+&$Peak_1$(kG) &$\sigma_1$(kG)&$Peak_2$(kG) &$\sigma_2$(kG)  \\ \hline
+Run 1 &0.9307$\pm$0.1251 & 0.3590$\pm$0.22 & 1.6558$\pm$0.0097 &0.1126$\pm$0.0119 \\ \hline
+Run 4 &0.9820$\pm$0.0189 &0.1212$\pm$0.0273 &1.6485$\pm$0.0039 &0.0910$\pm$0.0055\\ \hline
+Average &0.9564$\pm$0.1265 &0.2401$\pm$0.2217 &1.6522$\pm$0.0105 &0.1018$\pm$0.0131 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}%
+
+To calculate the error in the averages given above, the propagation for adding quantities is utilized:
+\begin{equation} \delta z=\sqrt{(\delta z_1)^2 + (\delta z_2)^2} \end {equation}
+
+\subsection{Calculation of Momentum}
+%e
+Since we have proved that both classical and relativistic momenta can be calculated with the same formula, we can use the following equation along with our average values of the peaks of our fit curves to determine experimental momenta:
+\begin{equation} p=300BR\end{equation}
+\begin{equation} p_1=300(0.09564\pm0.01265 T)(0.0290\pm 0.0005m)=0.8321\pm0.1110 MeV/c\end{equation}
+\begin{equation} p_2=300(0.16522\pm0.00105 T)(0.0290\pm 0.0005m)=1.4374\pm0.0264 MeV/c\end{equation}\\
+The error on the calculation of momentum is determined by the properties of multiplication in error propagation:
+\begin{equation} \delta p= |p|\sqrt{(\frac{\delta R}{R})^2 + (\frac{\delta B}{B})^2}\end{equation}\\
+We can analyze the difference between our estimated and experimental values for momenta by calculation the percent errors: 
+\begin{equation} p_{1,error}=|\frac{1.4374-1.3970}{1.3970}|=0.0289\end{equation}
+\begin{equation} p_{1,\% error}= 2.89 \% \end{equation}
+\begin{equation} p_{2,error}=|\frac{0.8321-0.8517}{0.8517}|=-0.0230\end{equation}
+\begin{equation} p_{2,\% error}= 2.30 \% \end{equation}\\
+We could expect that there would be less error in calculating the momentum of the electron at the second, higher peak because the particles at this magnetic field have more energy and can therefore can be more easily detected than the particles at the first peak. 
+
+\subsection{Determining the Electron Mass}
+%e
+Rearranging Equation 8 given in the Theory section, we can solve for the rest mass of the electron using theoretical energy values and the momentum calculated directly above:
+\begin{equation} m_0=\sqrt{\frac{E^2-p^2c^2}{c^4}}\end{equation}
+It is important to remember here that E is the total energy of the particle in a particle energy state minus the binding energy, but including the rest mass energy of 0.511MeV, therefore \\$E_1=0.4809MeV+0.511MeV=0.9919MeV$ and $E_2=0.976MeV+0.511MeV=1.487MeV$. We can now find the rest mass using these values:
+\begin{equation} m_0{_1}=\sqrt{\frac{(0.9919MeV)^2-(0.8321MeV/c)^2}{c^4}}=0.5399\pm0.0720 MeV/c^2\end{equation}
+\begin{equation} m_0{_2}=\sqrt{\frac{(1.487MeV)^2-(1.4374MeV/c)^2}{c^4}}=0.3809\pm0.0070 MeV/c^2\end{equation}
+The error propagation here is determined by the multiplication rules:
+\begin{equation} \delta m= |m|\frac{\delta p}{p} \end {equation}
+
+Again, we can examine our calculations in comparison with the known rest mass of an electron of 0.511MeV by calculating a percent error:
+\begin{equation} m_{0,1,error}=|\frac{0.5399-0.511}{0.511}|=0.0565\end{equation}
+\begin{equation} m_{0,1,\%error}=5.65\%\end{equation}
+\begin{equation} m_{0,2,error}=|\frac{0.3809-0.511}{0.511}|=-0.2546\end{equation}
+\begin{equation} m_{0,2,\%error}=25.46\%\end{equation}\\
+With regards to the same logic for errors in the momentum calculation above, we would expect that the rest mass of the second peak would be more accurate in comparison to theoretical values because of the particles at higher energy. However, our calculation at the first peak is more accurate by a factor of five. This could be due to an inaccurately defined peak for the second curve, which would affect the experimental momentum and therefore the rest mass calculation. It may also be a result of the way that we chose to take data for the extended set of data in Run 4. Though we expanded the number of data points around our theoretical magnetic field peaks, the actual B field value for the fitted curve is about 0.05 kG higher than predicted. This means that our data points were not evenly weighted around the actual magnetic field corresponding to the maximum number of counts. 
+
+\subsection{Experimental Line Width}
+As previously mentioned the source and detector have a finite area which will result in a range of radii which an electron can traverse and be counted. This means that for an electron emitted with any given energy there are in fact multiple magnetic field strengths which will allow it to traverse through the slits and be detected. First we express our maximum and minimum radii in terms of the width of the source slit $x_s$ and the width of the detector slit $x_d$.  We do not use the slit in the middle bar since it is larger than the source slit and will not be a limiting factor in the line width (see Figure 3). The slit widths are taken from the same figure. 
+\begin{equation}
+R_{min} = (r-\frac{x_d + x_s}{2}) = 0.0262 m 
+\end{equation}  
+\begin{equation}
+R_{max} = (r+\frac{x_d + x_s}{2}) = 0.0318 m 
+\end{equation}  
+
+Then using Equation 18 we can use the kinetic energy of our particles to find an expression for the width of our gaussian due to the finite size of our components. 
+\begin{equation}
+KE =\frac{ p^{2}}{2m} = \frac{(200BR)^{2}}{2m} 
+\end{equation} 
+solving for B,
+\begin{equation}
+B = \frac{\sqrt{2mKE}}{300R}
+\end{equation}
+Using Equation we can solve for $\Delta$ B.
+\begin{equation}
+\Delta B = \frac{\sqrt{2mKE}}{300}(\frac{1}{R_{max}}-\frac{1}{R_{min}})= \frac{\sqrt{2mKE}}{300}(\frac{\Delta R}{R_{max}R_{min}})
+\end{equation}
+For our first peak we use $KE_{1}$ calculated in Equation 27 and the vertical slit widths from Figure 3.
+\begin{equation}
+\Delta B_{1} = \frac{\sqrt{2(0.511)(0.9760)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0222 kG
+\end{equation}
+Do the same for the second peak with $KE_{2}$ from Equation 29.
+\begin{equation}
+\Delta B_{2} = \frac{\sqrt{2(0.511)(0.4809)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0156 kG
+\end{equation}
+
+As you can see if you look at Table 1 the predicted width of the magnetic field distribution is very close to the experimental value we calculated with our Gaussian fits performed previously.  The remaining error is most likely due to a combination of experimental error and the energy loss that will be discussed in the following section. 
+
+\subsection {Energy Loss}
+Since the experiment is not performed in a vacuum there is a finite energy loss due to collisions and interactions with other particles as the electron traverses its arc.  This energy loss, $dE$, per distance traveled, $ds$ is given by the formula below \cite{bethe}:
+\begin{equation}
+\frac{dE}{ds} = 4\pi r^{2}_{0} \frac{m_{0}c^{2}}{\beta^{2}} N Z_{0} \{ ln[\beta (\frac{E+m_{0}c^{2}}{I})({E}{m_{0}c^{2}})^{1/2} ] - \frac{\beta^{2}}{2} \} 
+\end{equation} 
+where\\
+$4\pi r_{0}^{2} = 1.0 \times 10^{-24} cm^{2}$\\
+$\beta = \frac{\upsilon}{c}$ = $\sqrt{1-\frac{mc^{2}}{E}}$\\
+$NZ = 3.88 \times 10^{20} / cm^{3}$ for air at STP\\
+$E$ = energy of electrons\\
+$I = 86$ eV\\
+
+For the first electron peak $E_1$ = 0.992 MeV and $\beta_1$ = 0.857 such that for the first peak fractional  energy loss is:
+\begin{equation}
+\frac{dE_1(s)}{ds} = 0.258 MeV/m
+\end{equation}
+integrating this function over $ds$ requires that we use the distance of the arc which is simply $s=\pi r$. Using $r = 0.0290 m$ we find that the total energy loss for the first peak due to interactions is:
+\begin{equation}
+E_1(s) = 0.0235 MeV
+\end{equation} 
+
+For the second peak at $E_2$ = 1.487 MeV and $\beta_2$ = 0.939 the fractional energy loss is:
+\begin{equation}
+\frac{dE_2(s)}{ds} = 0.227 MeV/m
+\end{equation}
+once again integrating over $ds$ with the same r we find the total energy loss for the second peak to be:
+\begin{equation}
+E_2 (s)= 0.0206 MeV
+\end{equation}
+
+The energy loss resulting from collisions and interactions will have two effects on the experiment.  First, it will broaden the range of magnetic field values for which we will detect electrons from the source. This is because the chance of interaction with another particle(s) is of course a game of probabilities meaning that some electrons will experience a greater energy loss and others a smaller energy loss than the one we have calculated.  Second it will most likely shift the magnetic field strength of our peak down from the theoretical maximum.  This is because on average our particles will lose energy which means we need a weaker magnetic field to focus them onto the detector.  
+  
+
+
+\section{Conclusion}
+\subsection{Improvements in Equipment and Methods}
+While the experimental apparatus allows for reasonable accuracy there are several possible improvements which would not only eliminate some of the experimental error but will make the experiment more useful to students.  The changes are enumerated below:
+\begin{enumerate}
+\item The easiest change to make to the experiment is to simply utilize the output hookup on the counter and connect it to a computer. You could then ask students to use the available software package for the counter to write a program to take multiple data points without having to manually record and manage the counter values.  This would allow students to gather larger data sets and increase the accuracy of their results. 
+\item The effectiveness of the previous suggestion is hampered by the fact that you must adjust the magnetic field manually.  Not only is the knob used to manage the current to the magnets very coarse, it is also arduous to ask students to cover the range with any sort of meaningful resolution given the time restraints this causes.  If a power supply that could be managed by a computer program is purchased you could ask students not only to take data with greater resolution but also accuracy. This change combined with using the output of the counter would make the experiment a meaningful lesson on programming skills as well as effective data gathering techniques. The changes would produce large data sets for analysis and result in higher accuracy calculations.  
+\end{enumerate} 
+
+
+\begin{thebibliography}{99}
+\bibitem{electron}Sleator, Tycho, David Windt, and Burton Budick \begin{em}Relativistic Electron Momentum\end{em}. Experimental Physics. V85.0112. Fall, 2012.
+\bibitem{bethe} H.A. Bethe, Z. Physik \begin{em} 76 \end{em} 293 (1932)
+\end{thebibliography}
+
+\newpage \LARGE{Appendix}
+\begin{table}[h!]
+\caption{Run 1}
+\begin{tabular}{|c|c|c|} \hline
+Field	(kG)&	Counts	&	Error	\\	\hline
+0.6009	&	10	&	3.16	\\	\hline
+0.6500	&	26	&	5.10	\\	\hline
+0.7009	&	20	&	4.47	\\	\hline
+0.7505	&	25	&	5.00	\\	\hline
+0.8008	&	32	&	5.66	\\	\hline
+0.8507	&	28	&	5.29	\\	\hline
+0.9006	&	35	&	5.92	\\	\hline
+0.9503	&	44	&	6.63	\\	\hline
+1.0002	&	36	&	6.00	\\	\hline
+1.0525	&	51	&	7.14	\\	\hline
+1.1067	&	40	&	6.32	\\	\hline
+1.1498	&	18	&	4.24	\\	\hline
+1.2000	&	27	&	5.20	\\	\hline
+1.2546	&	31	&	5.57	\\	\hline
+1.3061	&	29	&	5.39	\\	\hline
+1.3528	&	22	&	4.69	\\	\hline
+1.4012	&	20	&	4.47	\\	\hline
+1.4503	&	25	&	5.00	\\	\hline
+1.5016	&	41	&	6.40	\\	\hline
+1.5526	&	50	&	7.07	\\	\hline
+1.6018	&	79	&	8.89	\\	\hline
+1.6512	&	101	&	10.05	\\	\hline
+1.7022	&	74	&	8.60	\\	\hline
+1.7554	&	61	&	7.81	\\	\hline
+1.8021	&	40	&	6.32	\\	\hline
+1.8524	&	24	&	4.90	\\	\hline
+1.9022	&	20	&	4.47	\\	\hline
+1.9495	&	27	&	5.20	\\	\hline
+2.0010	&	15	&	3.87	\\	\hline
+\end{tabular}
+\end{table}
+\begin{table}
+\caption{Run 2}
+\begin{tabular}{|c|c|c|} \hline
+Field	&	Counts	&	Error	\\ \hline
+0.6009	&	14	&	3.74	\\ \hline
+0.6500	&	17	&	4.12	\\ \hline
+0.7004	&	21	&	4.58	\\ \hline
+0.7520	&	21	&	4.58	\\ \hline
+0.8014	&	33	&	5.74	\\ \hline
+0.8502	&	25	&	5.00	\\ \hline
+0.9025	&	37	&	6.08	\\ \hline
+0.9505	&	36	&	6.00	\\ \hline
+1.0002	&	41	&	6.40	\\ \hline
+1.0525	&	38	&	6.16	\\ \hline
+1.1004	&	33	&	5.74	\\ \hline
+1.1501	&	33	&	5.74	\\ \hline
+1.2017	&	29	&	5.39	\\ \hline
+1.2506	&	21	&	4.58	\\ \hline
+1.3006	&	26	&	5.10	\\ \hline
+1.3509	&	35	&	5.92	\\ \hline
+1.4012	&	19	&	4.36	\\ \hline
+1.4506	&	30	&	5.48	\\ \hline
+1.5030	&	39	&	6.24	\\ \hline
+1.5497	&	60	&	7.75	\\ \hline
+1.6015	&	84	&	9.17	\\ \hline
+1.6531	&	92	&	9.59	\\ \hline
+1.7008	&	80	&	8.94	\\ \hline
+1.7535	&	66	&	8.12	\\ \hline
+1.8009	&	58	&	7.62	\\ \hline
+1.8501	&	36	&	6.00	\\ \hline
+1.9009	&	29	&	5.39	\\ \hline
+1.9510	&	22	&	4.69	\\ \hline
+2.0019	&	16	&	4.00	\\ \hline
+\end{tabular}
+\end{table}
+\begin{table}
+\caption{Run 3}
+\begin{tabular}{|c|c|c|} \hline
+Field	&	Counts	&	Error	\\ \hline
+0.6006	&	19	&	4.36	\\ \hline
+0.6496	&	20	&	4.47	\\ \hline
+0.7028	&	27	&	5.20	\\ \hline
+0.7513	&	26	&	5.10	\\ \hline
+0.8015	&	17	&	4.12	\\ \hline
+0.8508	&	22	&	4.69	\\ \hline
+0.9008	&	30	&	5.48	\\ \hline
+0.9509	&	53	&	7.28	\\ \hline
+1.0015	&	31	&	5.57	\\ \hline
+1.0498	&	36	&	6.00	\\ \hline
+1.1000	&	42	&	6.48	\\ \hline
+1.1508	&	30	&	5.48	\\ \hline
+1.2014	&	24	&	4.90	\\ \hline
+1.2508	&	35	&	5.92	\\ \hline
+1.3047	&	16	&	4.00	\\ \hline
+1.3518	&	29	&	5.39	\\ \hline
+1.4011	&	22	&	4.69	\\ \hline
+1.4515	&	33	&	5.74	\\ \hline
+1.5027	&	41	&	6.40	\\ \hline
+1.5505	&	67	&	8.19	\\ \hline
+1.6025	&	88	&	9.38	\\ \hline
+1.6518	&	92	&	9.59	\\ \hline
+1.7015	&	81	&	9.00	\\ \hline
+1.7518	&	50	&	7.07	\\ \hline
+1.8043	&	40	&	6.32	\\ \hline
+1.8519	&	14	&	3.74	\\ \hline
+1.9020	&	23	&	4.80	\\ \hline
+1.9514	&	21	&	4.58	\\ \hline
+2.0021	&	14	&	3.74	\\ \hline
+\end{tabular}
+\end{table}
+\begin{table}
+\caption{Run 4}
+\begin{tabular}{|c|c|c|} \hline
+Field (kG)	&	Counts	&	Error	\\ \hline
+2.0024	&	25	&	5.00	\\ \hline
+1.9532	&	25	&	5.00	\\ \hline
+1.9019	&	25	&	5.00	\\ \hline
+1.8519	&	34	&	5.83	\\ \hline
+1.8253	&	29	&	5.39	\\ \hline
+1.8006	&	40	&	6.32	\\ \hline
+1.7750	&	58	&	7.62	\\ \hline
+1.7503	&	55	&	7.42	\\ \hline
+1.7251	&	74	&	8.60	\\ \hline
+1.7009	&	94	&	9.70	\\ \hline
+1.6902	&	92	&	9.59	\\ \hline
+1.6801	&	93	&	9.64	\\ \hline
+1.6701	&	105	&	10.25	\\ \hline
+1.6603	&	122	&	11.05	\\ \hline
+1.6505	&	100	&	10.00	\\ \hline
+1.6001	&	92	&	9.59	\\ \hline
+1.5903	&	83	&	9.11	\\ \hline
+1.5805	&	92	&	9.59	\\ \hline
+1.5705	&	69	&	8.31	\\ \hline
+1.5602	&	75	&	8.66	\\ \hline
+1.5517	&	72	&	8.49	\\ \hline
+1.5254	&	45	&	6.71	\\ \hline
+1.5038	&	33	&	5.74	\\ \hline
+1.4759	&	29	&	5.39	\\ \hline
+1.4507	&	27	&	5.20	\\ \hline
+1.4249	&	35	&	5.92	\\ \hline
+1.4019	&	33	&	5.74	\\ \hline
+1.3514	&	20	&	4.47	\\ \hline
+1.3035	&	36	&	6.00	\\ \hline
+1.2501	&	26	&	5.10	\\ \hline
+1.2041	&	28	&	5.29	\\ \hline
+1.1528	&	20	&	4.47	\\ \hline
+1.1255	&	39	&	6.24	\\ \hline
+1.1027	&	32	&	5.66	\\ \hline
+1.0896	&	34	&	5.83	\\ \hline
+1.0805	&	43	&	6.56	\\ \hline
+1.0702	&	47	&	6.86	\\ \hline
+1.0606	&	42	&	6.48	\\ \hline
+1.0509	&	41	&	6.40	\\ \hline
+1.0246	&	43	&	6.56	\\ \hline
+1.0011	&	39	&	6.24	\\ \hline
+0.9531	&	39	&	6.24	\\ \hline
+0.9050	&	43	&	6.56	\\ \hline
+0.8511	&	30	&	5.48	\\ \hline
+0.8022	&	40	&	6.32	\\ \hline
+0.7521	&	21	&	4.58	\\ \hline
+0.7020	&	28	&	5.29	\\ \hline
+0.6498	&	20	&	4.47	\\ \hline
+0.6004	&	26	&	5.10	\\ \hline
+
+\end{tabular}
+\end{table}
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=7.5in]{field_counts.pdf}
+%\end{center}
+%\end{figure}
+
+
+
+\end{document}  

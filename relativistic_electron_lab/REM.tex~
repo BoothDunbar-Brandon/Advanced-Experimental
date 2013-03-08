@@ -1,0 +1,76 @@
+
+
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Relativistic Electron Momentum}
+\author{Ekta Patel & Brandon Booth-Dunbar}
+\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle{}
+
+\begin{abstract}
+%Brandon
+\end{abstract}
+
+\section{Intro}
+%Brandon
+
+\section{Theory}
+%Ekta
+%\subsection{}
+
+Using relativistic energy and momentum:
+
+\begin{equation} E=m_0c^2+KE=\gamma mc^2\end{equation}
+\begin{equation} p=\gamma v^2\end{equation}
+\begin{equation}E^2=p^2c^2+m^2c^4\end{equation}
+\begin{equation}KE+mc^2=\sqrt{p^2c^2+m^2c^4}\end{equation}
+We know KE from the lab manual in units of MeV, solve for p:
+\begin{equation}(KE+mc^2)^2=p^2c^2+m^2c^4\end{equation}
+\begin{equation}(KE+mc^2)^2-m^2c^4=p^2c^2\end{equation}
+\begin{equation}\frac{(KE+mc^2)^2-m^2c^4}{c^2}=p^2\end{equation}
+\begin{equation}\frac{p=\sqrt{(KE+mc^2)^2-m^2c^4}}{c}\end{equation}
+We are given:
+\begin{equation}p=qRB\end{equation}
+Where R is the radius of the detector-source apparatus, which we have measured to be .0290m:
+\begin{equation}\frac{p=\sqrt{(KE+mc^2)^2-m^2c^4}}{c}=eB(.0290m)\end{equation}
+Solving for B, we can estimate our magnetic fields needed to see the electron pulses:
+\begin{equation}B=\frac{\sqrt{(KE+mc^2)^2-m^2c^4}}{ce(.0290m)}\end{equation}
+Before solving for B, we must account for the energy lost by the electron due to k-shell binding energy which is $\sim$88keV:
+\begin{equation}KE=1.064MeV-0.088005MeV=0.975995\end{equation}
+Now, we can substitute all of our values into equation 11 to obtain:
+\begin{equation} B=0.1606T=1.606kG\end{equation}
+For the second electron pulse with .5689MeV:
+\begin{equation}KE=0.5689MeV-.0.088005MeV=MeV\end{equation}
+Once again, using equation 11:
+\begin{equation}B=0.0979T=0.979kG\end{equation}
+
+Remember to consider the fact that the electron loses energy as it travels in the air when doing error analysis!
+
+\section{Experimental Methods}
+%Brandon
+\subsection{Apparatus}
+
+\subsection{Calibration}
+The calibration of the apparatus is the most detail sensitive step in the experiment.  While calibrating the detector system if you set the amplifier too high or the single channel analyzer too low you will get very large background counts from the sensor and willnot reliably be able to detect the peaks of electron emission from the ¿Byzanthium? source.  On the other hand if the discriminator is set too high or the amplifier to low you will not get enough counts to clearly define a peak when you perform your measurements. 
+\subsection{Procedure}
+
+\section{Results $\&$ Discussion}
+%Ekta
+
+\section{Conclusion}
+%Ekta & Brandon
+
+
+
+
+
+\end{document}  
