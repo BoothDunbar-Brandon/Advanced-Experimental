@@ -4,112 +4,109 @@
     version="1.1" baseProfile="full">
     <defs/>
     <g>
-        <g latexdraw:type="drawing" id="id735">
-            <g latexdraw:type="drawing" id="id736">
-                <g latexdraw:type="rectangle" id="id737">
-                    <rect x="323.0" y="222.0" width="277.0"
-                        height="19.0" latexdraw:borderPos="outer"
-                        stroke-width="2.0" stroke="black" fill="#aca5a5"/>
-                </g>
-                <g latexdraw:type="rectangle" id="id738">
-                    <rect x="450.0" y="110.0" width="18.0"
-                        height="112.0" latexdraw:borderPos="outer"
-                        stroke-width="2.0" stroke="black" fill="#a3a1a1"/>
-                </g>
-                <g latexdraw:type="drawing" id="id739">
-                    <g latexdraw:type="bezierCurve" id="id740">
-                        <path
-                            d="M 487.8671357847969 160.2655444965103 C 472.5482097447253 158.68675887714514 486.0649927459875 99.0161335110715 472.0114812203856 104.64736962743152 "
-                            stroke-width="2.0" stroke="black"
-                            fill="none" latexdraw:rotationAngle="4.6863158766320305"/>
-                    </g>
-                    <g latexdraw:type="bezierCurve" id="id743">
-                        <path
-                            d="M 487.852945682129 159.78326566985314 C 472.1496393130796 163.0393486461025 489.7402293369451 223.9263496152338 475.8582471265858 217.4885347240438 "
-                            stroke-width="2.0" stroke="black"
-                            fill="none" latexdraw:rotationAngle="4.6863158766320305"/>
-                    </g>
-                </g>
-                <g latexdraw:type="text" id="id747" font-family="Dialog"
-                    fill="black" font-size="18" latexdraw:x="496.0">
-                    <text x="496.0" y="167.0"><![CDATA[r]]></text>
-                </g>
-                <g latexdraw:type="arc" id="id750">
+        <g latexdraw:type="drawing" id="id251">
+            <g latexdraw:type="rectangle" id="id252">
+                <rect x="323.0" y="222.0" width="277.0" height="19.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#aca5a5"/>
+            </g>
+            <g latexdraw:type="rectangle" id="id253">
+                <rect x="450.0" y="110.0" width="18.0" height="112.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#a3a1a1"/>
+            </g>
+            <g latexdraw:type="drawing" id="id254">
+                <g latexdraw:type="bezierCurve" id="id255">
                     <path
-                        d="M 588.0 221.5 A 126.5 126.5 0.0 0 0 335.0 221.49999999999997 "
+                        d="M 487.8671357847969 160.2655444965103 C 472.5482097447253 158.68675887714514 486.0649927459875 99.0161335110715 472.0114812203856 104.64736962743152 "
                         stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
                 </g>
-                <g latexdraw:type="rectangle" id="id754">
-                    <rect x="449.0" y="74.0" width="20.0" height="18.0"
-                        latexdraw:borderPos="outer" stroke-width="2.0"
-                        stroke="black" fill="#9d9393"/>
-                </g>
-                <g latexdraw:type="rectangle" id="id755">
-                    <rect x="572.0" y="222.0" width="18.0" height="9.0"
-                        latexdraw:borderPos="outer" stroke-width="2.0"
-                        stroke="black" fill="#ee2525"/>
-                </g>
-                <g latexdraw:type="rectangle" id="id756">
-                    <rect x="332.0" y="222.0" width="18.0" height="9.0"
-                        latexdraw:borderPos="outer" stroke-width="2.0"
-                        stroke="black" fill="#1050f2"/>
-                </g>
-                <g latexdraw:type="drawing" id="id757">
-                    <g latexdraw:type="bezierCurve" id="id758">
-                        <path
-                            d="M 462.06160865243123 260.109389502172 C 466.1541564114097 243.49479288757217 592.0 260.109389502172 580.7454936628089 244.6406269491752 "
-                            stroke-width="2.0" stroke="black"
-                            fill="none" latexdraw:rotationAngle="0.0"/>
-                    </g>
-                    <g latexdraw:type="bezierCurve" id="id761">
-                        <path
-                            d="M 463.08474559217586 260.109389502172 C 456.9459239537081 242.921876 327.00753260613914 260.109389502172 341.331449762564 245.2135444096645 "
-                            stroke-width="2.0" stroke="black"
-                            fill="none" latexdraw:rotationAngle="0.0"/>
-                    </g>
-                </g>
-                <g latexdraw:type="text" id="id765" font-family="Dialog"
-                    fill="black" font-size="18" latexdraw:x="458.0">
-                    <text x="458.0" y="282.0"><![CDATA[L]]></text>
-                </g>
-                <g latexdraw:type="text" id="id768" font-family="Dialog"
-                    fill="black" font-size="18" latexdraw:x="590.0">
-                    <text x="590.0" y="217.0"><![CDATA[Source]]></text>
-                </g>
-                <g latexdraw:type="text" id="id771" font-family="Dialog"
-                    fill="black" font-size="18" latexdraw:x="253.0">
-                    <text x="253.0" y="216.0"><![CDATA[Detector]]></text>
-                </g>
-                <g latexdraw:type="drawing" id="id774">
-                    <g latexdraw:type="drawing" id="id775">
-                        <g latexdraw:type="bezierCurve" id="id776">
-                            <path
-                                d="M 395.0998419876149 204.77961359418362 C 393.18081792842906 220.04953275902608 337.74404615568136 204.92713814427748 342.60709022752644 219.12685589297234 "
-                                stroke-width="2.0" stroke="black"
-                                fill="none" latexdraw:rotationAngle="3.1443729461354795"/>
-                        </g>
-                        <g latexdraw:type="bezierCurve" id="id779">
-                            <path
-                                d="M 394.6482215479932 204.7807752048139 C 397.24152111763897 220.56546676009725 454.7137400176558 204.62628099093655 448.2901538702276 218.32864998226262 "
-                                stroke-width="2.0" stroke="black"
-                                fill="none" latexdraw:rotationAngle="3.1443729461354795"/>
-                        </g>
-                    </g>
-                    <g latexdraw:type="text" id="id783"
-                        font-family="Dialog" fill="black" font-size="18"
-                        latexdraw:x="390.56093883730836" transform="rotate(-0.4010458857217465) translate(-1.3544081405718202 2.7606923387354243)">
-                        <text x="390.56093883730836" y="197.1566578879462"><![CDATA[r]]></text>
-                    </g>
-                </g>
-                <g latexdraw:type="arc" id="id787">
+                <g latexdraw:type="bezierCurve" id="id258">
                     <path
-                        d="M 575.0 221.5 A 113.5 113.5 0.0 0 0 348.0 221.5 "
+                        d="M 487.852945682129 159.78326566985314 C 472.1496393130796 163.0393486461025 489.7402293369451 223.9263496152338 475.8582471265858 217.4885347240438 "
                         stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
                 </g>
             </g>
-            <g latexdraw:type="text" id="id792" font-family="Dialog"
+            <g latexdraw:type="text" id="id262" font-family="Dialog"
+                fill="black" font-size="18" latexdraw:x="494.0">
+                <text x="494.0" y="164.0"><![CDATA[r]]></text>
+            </g>
+            <g latexdraw:type="rectangle" id="id264">
+                <rect x="449.0" y="74.0" width="20.0" height="18.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#9d9393"/>
+            </g>
+            <g latexdraw:type="rectangle" id="id265">
+                <rect x="572.0" y="222.0" width="18.0" height="9.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#ee2525"/>
+            </g>
+            <g latexdraw:type="rectangle" id="id266">
+                <rect x="332.0" y="222.0" width="18.0" height="9.0"
+                    latexdraw:borderPos="outer" stroke-width="2.0"
+                    stroke="black" fill="#1050f2"/>
+            </g>
+            <g latexdraw:type="drawing" id="id267">
+                <g latexdraw:type="bezierCurve" id="id268">
+                    <path
+                        d="M 462.06160865243123 260.109389502172 C 466.1541564114097 243.49479288757217 592.0 260.109389502172 580.7454936628089 244.6406269491752 "
+                        stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="bezierCurve" id="id271">
+                    <path
+                        d="M 463.08474559217586 260.109389502172 C 456.9459239537081 242.921876 327.00753260613914 260.109389502172 341.331449762564 245.2135444096645 "
+                        stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+                </g>
+            </g>
+            <g latexdraw:type="text" id="id275" font-family="Dialog"
+                fill="black" font-size="18" latexdraw:x="458.0">
+                <text x="458.0" y="282.0"><![CDATA[L]]></text>
+            </g>
+            <g latexdraw:type="text" id="id277" font-family="Dialog"
+                fill="black" font-size="18" latexdraw:x="590.0">
+                <text x="590.0" y="217.0"><![CDATA[Source]]></text>
+            </g>
+            <g latexdraw:type="text" id="id279" font-family="Dialog"
+                fill="black" font-size="18" latexdraw:x="253.0">
+                <text x="253.0" y="216.0"><![CDATA[Detector]]></text>
+            </g>
+            <g latexdraw:type="drawing" id="id281">
+                <g latexdraw:type="bezierCurve" id="id282">
+                    <path
+                        d="M 401.116725881397 204.77961359418362 C 398.9963874687789 220.04953275902608 337.74404615568136 204.92713814427748 343.1172456726078 219.12685589297234 "
+                        stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+                </g>
+                <g latexdraw:type="bezierCurve" id="id285">
+                    <path
+                        d="M 400.6177284032415 204.7807752048139 C 403.4830768946402 220.56546676009725 466.9843929978887 204.62628099093655 459.8869434427581 218.32864998226262 "
+                        stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+                </g>
+            </g>
+            <g latexdraw:type="text" id="id289" font-family="Dialog"
+                fill="black" font-size="18"
+                latexdraw:x="398.5609388373083" transform="rotate(-0.40104588572174643) translate(-1.3546041157572404 2.8166884507466534)">
+                <text x="398.5609388373083" y="197.1566578879461"><![CDATA[r]]></text>
+            </g>
+            <g latexdraw:type="arc" id="id291">
+                <path
+                    d="M 583.0 221.0 A 122.0 122.0 0.0 0 0 339.0 220.99999999999997 "
+                    stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+            </g>
+            <g latexdraw:type="text" id="id295" font-family="Dialog"
                 fill="black" font-size="18" latexdraw:x="386.0">
                 <text x="386.0" y="58.0"><![CDATA[\psframebox[linewidth=0.04]{Detector/Source}]]></text>
+            </g>
+            <g latexdraw:type="text" id="id298" font-family="Dialog"
+                fill="black" font-size="14" latexdraw:x="479.0">
+                <text x="479.0" y="91.0"><![CDATA[Slit 3.5 mm x 1.2cm]]></text>
+            </g>
+            <g latexdraw:type="text" id="id301" font-family="Dialog"
+                fill="black" font-size="14" latexdraw:x="609.0">
+                <text x="609.0" y="238.0"><![CDATA[Slit 2mm diameter]]></text>
+            </g>
+            <g latexdraw:type="text" id="id304" font-family="Dialog"
+                fill="black" font-size="14" latexdraw:x="205.0">
+                <text x="205.0" y="234.0"><![CDATA[Slit 2mm x 1cm]]></text>
             </g>
         </g>
     </g>
