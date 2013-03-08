@@ -122,7 +122,7 @@ The only compenent that is non-standard is the source-detector component.  This 
 \end{center}
 \end{figure}
 
-The component is T-shaped and primarily made of metal with insets on both arms as well as a slit in the middle post.  In one inset there the $Bi^{207}$ source shielded by a lead plate on the underside and in the other inset is the detector with a male hookup on the underside.  The size of our slits as well as their relative distance between them  determine the radius of the arc the elctron must traverse to be emitted and detected. The relevant distances are labled on the figure with r equal to .0290 m $\pm$ .0005 m and L equal to twice the radius.  It should be noted that a range of radii will be allowed through the slit because of its width but for the majority of our calculations we use the radius which is halfway between the highest and lowest arc. Section 5.3 will address this issue. 
+The component is T-shaped and primarily made of metal with insets on both arms as well as a slit in the middle post.  In one inset there the $Bi^{207}$ source shielded by a lead plate on the underside and in the other inset is the detector with a male hookup on the underside.  The size of our slits as well as their relative distance between them  determine the radius of the arc the elctron must traverse to be emitted and detected. The relevant distances are labled on the figure with r equal to 0.0290 m $\pm$0 .0005 m and L equal to twice the radius.  It should be noted that a range of radii will be allowed through the slit because of its width but for the majority of our calculations we use the radius which is halfway between the highest and lowest arc. Section 5.3 will address this issue. 
 
 The magnetic field system is simple, consisting of an adjustable power supply unit, cooling system, gaussmeter, and probe which can be seen in the figure below. 
 
@@ -229,10 +229,36 @@ Again, we can examine our calculations in comparison with the known rest mass of
 \begin{equation} m_{0,2,error}=|\frac{0.3809-0.511}{0.511}|=-0.2546\end{equation}
 \begin{equation} m_{0,2,\%error}=25.46\%\end{equation}
 \subsection{Experimental Line Width}
-As previously mentioned the source and detector have a finite area which will result in a range of radii which an electron can traverse and be counted. This means that for an electron emitted with any given energy there are in fact multiple magnetic field strengths which will allow it to traverse through the slits and be detected. First we express our maximum and minimum radii in terms of the width of the source slit $x_s$ and the width of the detector slit $x_d$:
+As previously mentioned the source and detector have a finite area which will result in a range of radii which an electron can traverse and be counted. This means that for an electron emitted with any given energy there are in fact multiple magnetic field strengths which will allow it to traverse through the slits and be detected. First we express our maximum and minimum radii in terms of the width of the source slit $x_s$ and the width of the detector slit $x_d$.  We do not use the slit in the middle bar since it is larger than the source slit and will not be a limiting factor in the line width (see Fig. 3). The slit widths are taken from the dame figure. 
 \begin{equation}
-R_{min} =
+R_{min} = (r-\frac{x_d + x_s}{2}) = 0.0262 m 
 \end{equation}  
+\begin{equation}
+R_{max} = (r+\frac{x_d + x_s}{2}) = 0.0318 m 
+\end{equation}  
+
+Then using Eq. 18 we can use the kinetic energy of our particles to find an expression for the width of our gaussian due to the finite size of our components. 
+\begin{equation}
+KE =\frac{ p^{2}}{2m} = \frac{(200BR)^{2}}{2m} 
+\end{equation} 
+solving for B,
+\begin{equation}
+B = \frac{\sqrt{2mKE}}{300R}
+\end{equation}
+Using Eq. we can solve for $\Delta$ B.
+\begin{equation}
+\Delta B = \frac{\sqrt{2mKE}}{300}(\frac{1}{R_{max}}-\frac{1}{R_{min}})= \frac{\sqrt{2mKE}}{300}(\frac{\Delta R}{R_{max}R_{min}})
+\end{equation}
+For our first peak we use $KE_{1}$ calculated in Eq. 27 and the vertical slit widths from Fig. 3.
+\begin{equation}
+\Delta B_{1} = \frac{\sqrt{2(0.511)(0.9760)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0222 kG
+\end{equation}
+Do the same for the second peak with $KE_{2}$ from Eq. 29.
+\begin{equation}
+\Delta B_{2} = \frac{\sqrt{2(0.511)(0.4809)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0156 kG
+\end{equation}
+
+As you can see if you look at Table 1 the predicted width of the magnetic field distribution is very close to the experimental value we calculated with our guassian fits performed previously.  The remaining error is most likely due to a combination of experimental error and the energy loss that will be discussed in the following section. 
 
 \subsection {Energy Loss}
 Since the experiment is not performed in a vacuum there is a finite energy loss due to collisions and interactions with other particles as the electron traverses its arc.  This energy loss, $dE$, per distance traveled, $ds$ is given by the formula below \cite{bethe}:
@@ -240,9 +266,9 @@ Since the experiment is not performed in a vacuum there is a finite energy loss 
 \frac{dE}{ds} = 4\pi r^{2}_{0} \frac{m_{0}c^{2}}{\beta^{2}} N Z_{0} \{ ln[\beta (\frac{E+m_{0}c^{2}}{I})({E}{m_{0}c^{2}})^{1/2} ] - \frac{\beta^{2}}{2} \} 
 \end{equation} 
 where\\
-$4\pi r_{0}^{2} = 1.0 \x 10^{-24} cm^{2}$\\
+$4\pi r_{0}^{2} = 1.0 \times 10^{-24} cm^{2}$\\
 $\beta = \frac{\upsilon}{c}$ = $\sqrt{1-\frac{mc^{2}}{E}}$\\
-$NZ = 3.88 \x 10^{20} / cm^{3}$ for air at STP\\
+$NZ = 3.88 \times 10^{20} / cm^{3}$ for air at STP\\
 $E$ = energy of electrons\\
 $I = 86$ eV\\
 
