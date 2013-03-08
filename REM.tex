@@ -136,7 +136,7 @@ The magnetic field system is simple, consisting of an adjustable power supply un
 \subsection{Procedure}
 
 \subsubsection{Calibration}
-The calibration of the apparatus is the most detail sensitive step in the experiment.  When calibrating the detector system if you set the amplifier too high or the single channel analyzer too low you will get very large background counts from the sensor and will not reliably be able to detect the peaks of electron emission from the $Bi²⁰⁷$ source.  On the other hand if the discriminator is set too high or the amplifier to low you will not get enough counts to clearly define a peak when you perform your measurements. Given the two ways with which you can raise or lower the number of counts from the detector it is best to choose a setting for either the amplifier or the single channel analyzer and then focus on adjusting only one of the settings.  We chose to leave the amplifier at THIS and adjust the single channel analyzer.  This was done in part because the detector system records hundreds of false counts any time the amplifier settings are adjusted while the single channel analyzer can be adjusted without registering any false counts. To perform the calibration we placed an additional $Bi²⁰⁷$ source directly over the detector and performed 60 second counts while increasing the threshold of the single channel analyzer. By watching the oscilloscope you can increase the analyzer to the maximum level before it begins to veto signals from actual electrons hitting the detector. At this point you will detect electrons from your source but will measure a limited number of false counts due to background and dark noise sources.  We found this level to be a change in energy of THIS V.  While the lab manual asks for a change in energy of 10-12 V the value is dependent on the amplifier settings and the lab manual does not specify what amplifier settings this corresponds to making this recommendation useless.
+The calibration of the apparatus is the most detail sensitive step in the experiment.  When calibrating the detector system if you set the amplifier too high or the single channel analyzer too low you will get very large background counts from the sensor and will not reliably be able to detect the peaks of electron emission from the $Bi²⁰⁷$ source.  On the other hand if the discriminator is set too high or the amplifier to low you will not get enough counts to clearly define a peak when you perform your measurements. Given the two ways with which you can raise or lower the number of counts from the detector it is best to choose a setting for either the amplifier or the single channel analyzer and then focus on adjusting only one of the settings.  We chose to leave the amplifier at a coarse value of 20 and a fine value of 9.5 and then adjusted the single channel analyzer.  This was done in part because the detector system records hundreds of false counts any time the amplifier settings are adjusted while the single channel analyzer can be adjusted without registering any false counts. To perform the calibration we placed an additional $Bi²⁰⁷$ source directly over the detector and performed 60 second counts while increasing the threshold of the single channel analyzer. By watching the oscilloscope you can increase the analyzer to the maximum level before it begins to veto signals from actual electrons hitting the detector. At this point you will detect electrons from your source but will measure a limited number of false counts due to background and dark noise sources.  We found this level to be a change in energy of 0.5 V.  While the lab manual asks for a change in energy of 10-12 V the value is dependent on the amplifier settings and the lab manual does not specify what amplifier settings this corresponds to making this recommendation useless.
 
 In addition to the calibration of the detector system you must also calibrate the gaussmeter to ensure that it is not only entirely perpendicular to the field but also zeroed correctly.  The probe of the gaussmeter can be correctly calibrated by placing it in the zeroing chamber each time the machine is turned on. Then you can rotate the probe once it is in the magnetic field to find the position at which it is perpendicular and is recording the true value of the field. If it is not in the right position you will record a magnetic field strength that is less than the actual value.  
 
@@ -149,7 +149,7 @@ To observe the magnetic field of the peak in number of counts, we took four full
 \\
 In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\
 \\
-Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 3 explicitly and in the fits given in Figures 4 and 6. 
+Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 6 explicitly and in the fits given in Figures 7 and 9. 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4 in]{run1_raw.png}
@@ -212,7 +212,9 @@ We can analyze the difference between our estimated and experimental values for 
 \begin{equation} p_{1,error}=|\frac{1.4374-1.3970}{1.3970}|=0.0289\end{equation}
 \begin{equation} p_{1,\% error}= 2.89 \% \end{equation}
 \begin{equation} p_{2,error}=|\frac{0.8321-0.8517}{0.8517}|=-0.0230\end{equation}
-\begin{equation} p_{2,\% error}= 2.30 \% \end{equation}
+\begin{equation} p_{2,\% error}= 2.30 \% \end{equation}\\
+We could expect that there would be less error in calculating the momentum of the electron at the second, higher peak because the particles at this magnetic field have more energy and can therefore can be more easily detected than the particles at the first peak. 
+
 \subsection{Determining the Electron Mass}
 %e
 Rearranging Equation 8 given in the Theory section, we can solve for the rest mass of the electron using theoretical energy values and the momentum calculated directly above:
@@ -227,7 +229,9 @@ Again, we can examine our calculations in comparison with the known rest mass of
 \begin{equation} m_{0,1,error}=|\frac{0.5399-0.511}{0.511}|=0.0565\end{equation}
 \begin{equation} m_{0,1,\%error}=5.65\%\end{equation}
 \begin{equation} m_{0,2,error}=|\frac{0.3809-0.511}{0.511}|=-0.2546\end{equation}
-\begin{equation} m_{0,2,\%error}=25.46\%\end{equation}
+\begin{equation} m_{0,2,\%error}=25.46\%\end{equation}\\
+With regards to the same logic for errors in the momentum calculation above, we would expect that the rest mass of the second peak would be more accurate in comparison to theoretical values because of the particles at higher energy. However, our calculation at the first peak is more accurate by a factor of five. This could be due to an inaccurately defined peak for the second curve, which would affect the experimental momentum and therefore the rest mass calculation. It may also be a result of the way that we chose to take data for the extended set of data in Run 4. Though we expanded the number of data points around our theoretical magnetic field peaks, the actual B field value for the fitted curve is about 0.05 kG higher than predicted. This means that our data points were not evenly weighted around the actual magnetic field corresponding to the maximum number of counts. 
+
 \subsection{Experimental Line Width}
 As previously mentioned the source and detector have a finite area which will result in a range of radii which an electron can traverse and be counted. This means that for an electron emitted with any given energy there are in fact multiple magnetic field strengths which will allow it to traverse through the slits and be detected. First we express our maximum and minimum radii in terms of the width of the source slit $x_s$ and the width of the detector slit $x_d$.  We do not use the slit in the middle bar since it is larger than the source slit and will not be a limiting factor in the line width (see Fig. 3). The slit widths are taken from the dame figure. 
 \begin{equation}
@@ -258,7 +262,7 @@ Do the same for the second peak with $KE_{2}$ from Eq. 29.
 \Delta B_{2} = \frac{\sqrt{2(0.511)(0.4809)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0156 kG
 \end{equation}
 
-As you can see if you look at Table 1 the predicted width of the magnetic field distribution is very close to the experimental value we calculated with our guassian fits performed previously.  The remaining error is most likely due to a combination of experimental error and the energy loss that will be discussed in the following section. 
+As you can see if you look at Table 1 the predicted width of the magnetic field distribution is very close to the experimental value we calculated with our Gaussian fits performed previously.  The remaining error is most likely due to a combination of experimental error and the energy loss that will be discussed in the following section. 
 
 \subsection {Energy Loss}
 Since the experiment is not performed in a vacuum there is a finite energy loss due to collisions and interactions with other particles as the electron traverses its arc.  This energy loss, $dE$, per distance traveled, $ds$ is given by the formula below \cite{bethe}:
@@ -295,11 +299,11 @@ The energy loss resulting from collisions and interactions will have two effects
 
 
 \section{Conclusion}
-\subsection{Improvments in Equipment and Methods}
+\subsection{Improvements in Equipment and Methods}
 While the experimental apparatus allows for reasonable accuracy there are several possible improvements which would not only eliminate some of the experimental error but will make the experiment more useful to students.  The changes are enumerated below:
 \begin{enumerate}
 \item The easiest change to make to the experiment is to simply utilize the output hookup on the counter and connect it to a computer. You could then ask students to use the available software package for the counter to write a program to take multiple data points without having to manually record and manage the counter values.  This would allow students to gather larger data sets and increase the accuracy of their results. 
-\item The effectiveness of the previous suggestion is hampered by the fact that you must adjust the magnetic field manually.  Not only is the knob used to manage the current to the magnets very course it is arduous to ask students to cover the range with any sort of meaningful resolution given the time restraints this causes.  If a power dupply that could be managed by a computer program is purchased you could ask students not only to take data with greater resolution but also accuracy. This change combined with using the output of the counter would make the experiment a meaningful lesson on programming skills as well as effective data gathering techniques. The changes would produce large data sets for analysis and result in higher accuracy calculations.  
+\item The effectiveness of the previous suggestion is hampered by the fact that you must adjust the magnetic field manually.  Not only is the knob used to manage the current to the magnets very course it is arduous to ask students to cover the range with any sort of meaningful resolution given the time restraints this causes.  If a power supply that could be managed by a computer program is purchased you could ask students not only to take data with greater resolution but also accuracy. This change combined with using the output of the counter would make the experiment a meaningful lesson on programming skills as well as effective data gathering techniques. The changes would produce large data sets for analysis and result in higher accuracy calculations.  
 \end{enumerate} 
 
 
