@@ -4,6 +4,7 @@
 %\usepackage{geometry}    
 %\geometry{letterpaper}                 		
 \input preamble.tex
+
 \newcommand{\ig}[2][width=4in]{\includegraphics[#1]{#2}}    		
 \usepackage{graphicx}					
 \usepackage{amssymb}
@@ -313,8 +314,9 @@ While the experimental apparatus allows for reasonable accuracy there are severa
 \end{thebibliography}
 
 \newpage \LARGE{Appendix}
+
 \begin{table}[h!]
-\caption{Run 1}
+\begin{minipage}[b]{0.45\linewidth}\centering
 \begin{tabular}{|c|c|c|} \hline
 Field	(kG)&	Counts	&	Error	\\	\hline
 0.6009	&	10	&	3.16	\\	\hline
@@ -347,9 +349,11 @@ Field	(kG)&	Counts	&	Error	\\	\hline
 1.9495	&	27	&	5.20	\\	\hline
 2.0010	&	15	&	3.87	\\	\hline
 \end{tabular}
-\end{table}
-\begin{table}
-\caption{Run 2}
+
+\end{minipage}
+%\end{table}
+%\begin{table}
+\begin{minipage}[b]{0.45\linewidth}\centering
 \begin{tabular}{|c|c|c|} \hline
 Field	&	Counts	&	Error	\\ \hline
 0.6009	&	14	&	3.74	\\ \hline
@@ -382,9 +386,11 @@ Field	&	Counts	&	Error	\\ \hline
 1.9510	&	22	&	4.69	\\ \hline
 2.0019	&	16	&	4.00	\\ \hline
 \end{tabular}
+\end{minipage}
+\caption{\textbf{Left}: First run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG. \textbf{Right}: Second run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG.}
 \end{table}
+
 \begin{table}
-\caption{Run 3}
 \begin{tabular}{|c|c|c|} \hline
 Field	&	Counts	&	Error	\\ \hline
 0.6006	&	19	&	4.36	\\ \hline
@@ -417,9 +423,12 @@ Field	&	Counts	&	Error	\\ \hline
 1.9514	&	21	&	4.58	\\ \hline
 2.0021	&	14	&	3.74	\\ \hline
 \end{tabular}
+\caption{Third run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG.}
 \end{table}
-\begin{table}
-\caption{Run 4}
+
+\pagebreak
+\begin{table}[t]
+\begin{minipage}[b]{0.45\linewidth}\centering
 \begin{tabular}{|c|c|c|} \hline
 Field (kG)	&	Counts	&	Error	\\ \hline
 2.0024	&	25	&	5.00	\\ \hline
@@ -447,6 +456,13 @@ Field (kG)	&	Counts	&	Error	\\ \hline
 1.5038	&	33	&	5.74	\\ \hline
 1.4759	&	29	&	5.39	\\ \hline
 1.4507	&	27	&	5.20	\\ \hline
+\end{tabular}
+\end{minipage}
+%\end{table}
+%\begin{table}
+\begin{minipage}[b]{0.45\linewidth}\centering
+\begin{tabular}{|c|c|c|} \hline
+Field	&	Counts	&	Error	\\ \hline
 1.4249	&	35	&	5.92	\\ \hline
 1.4019	&	33	&	5.74	\\ \hline
 1.3514	&	20	&	4.47	\\ \hline
@@ -471,10 +487,10 @@ Field (kG)	&	Counts	&	Error	\\ \hline
 0.7020	&	28	&	5.29	\\ \hline
 0.6498	&	20	&	4.47	\\ \hline
 0.6004	&	26	&	5.10	\\ \hline
-
 \end{tabular}
+\end{minipage}
+\caption{Fourth run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG. Around the predicted peaks in counts per 5 min of about 1.0 kG and 1.6 kG, the counts per 5 min were recorded at intervals of 0.01 kG for 5 consecutive intervals in each direction of both peaks. }
 \end{table}
-
 %\begin{figure}[h!]
 %\begin{center}
 %\includegraphics[width=7.5in]{field_counts.pdf}
