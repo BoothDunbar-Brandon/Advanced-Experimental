@@ -31,19 +31,19 @@ This lab explores one of the most easily accessible expressions of relativistic 
 \section{Theory}
 
 \subsection{Energy}
-In Newtonian mechanics, kinetic energy and momentum are given by the following equations of motion:
+In Newtonian mechanics, kinetic energy($KE$) and momentum($p$) are given by the following equations of motion where m is the mass of the system:
 \begin{equation}KE= \frac{1}{2}mv^2 \end{equation}
 \begin{equation} p=mv \end{equation}
 \begin {equation}KE=\frac{p^2}{2m} \end{equation}
 
-However, when dealing with particles that are moving at the speed of light, relativistic motion must be considered. When the velocity of a particle,v, approaches the speed of light, c, the equations for energy and momentum become:
+However, when dealing with particles that are moving at the speed of light, relativistic motion must be considered. When the velocity of a particle,$v$, approaches the speed of light, $c$, the equations for energy($E$) and momentum($p$) become:
 \begin{equation} E=\gamma mc^2\end{equation}
 \begin{equation} p=\gamma mv\end{equation}
-where $\gamma$ is:
+where gamma, $\gamma$, is:
 \begin{equation} \gamma= \frac{1}{\sqrt{1-(\frac{v}{c})^2}}\end{equation}
 Therefore, total relativistic energy of a particle can be written as:
 \begin{equation} E=m_0c^2+KE=\gamma mc^2\end{equation}
-The first term of Equation 7 represents the rest-mass energy of the particle, which is an electron for the purpose of this lab. Relativistic energy is also commonly expressed in terms of momentum as given by Equation 8:
+The first term of Equation 7 represents the rest-mass energy of the particle, an electron for the purpose of this lab. Relativistic energy is also commonly expressed in terms of momentum as given by Equation 8:
 \begin{equation}E^2=p^2c^2+m_0^2c^4\end{equation}
 \subsection{Momentum and Force}
 To measure the momentum of an electron in this experiment, we observe an externally applied magnetic field which can be varied. Recalling the Lorentz force when the velocity vector of a particle is perpendicular to the magnetic field, we have a magnetic force represented as:
@@ -53,9 +53,9 @@ Since we are observing the trajectory of an electron, $q$ can be replaced with t
 A magnetic force applied perpendicular to the velocity vector of the electron will cause it to be deflected into a circular trajectory from the source, through the slit and into the detector of the apparatus. A relationship between the magnetic field and the momentum of the electron can then be developed by equating the magnetic force of the electron with the centripetal motion of the particle,$F_{mag}=F_c$:
 \begin{equation} F_c=\frac{mv^2}{R}\end{equation}
 \begin{equation} evB=\frac{mv^2}{R}.\end {equation}
-Substituting the Newtonian equation of momentum, $p=mv$, yields:
+Substituting the Newtonian equation of momentum ($p=mv$) yields:
 \begin{equation}p=eBR,\end{equation}
-To make this relation easier to work with, magnetic field is measured in Tesla($1x10^4$ Gauss), radius is measured in meters, and momentum is expressed in units of MeV/c. Substituting the value of an elementary charge and converting to these units transforms Equation 13 to:
+To put momentum ($p$) in units of $MeV/c$, magnetic field is measured in Tesla(1x$10^4$ Gauss), radius is measured in meters, and momentum is expressed in units of MeV/c. Substituting the value of an elementary charge and converting to these units transforms Equation 13 to:
 \begin{equation} p=300BR\end{equation}
 We have derived the expression for momentum in a purely classical way, however, in our experiment, the electrons are moving extremely close to the speed of light so we must validate that this relation for momentum still holds true under relativistic conditions.
 \\
@@ -66,14 +66,16 @@ The magnetic field holds true under relativistic conditions in this experiment b
 \begin{equation}p=eBR,\end{equation} which can also be written as \begin{equation} p=300BR.\end{equation} Therefore, we can conclude that the both the classical and relativistic equations of motion result in the same expression for momentum. We can use this result to find the values for a magnetic field that gives the highest count rate to calculate and electron's momentum and energy. 
 
 \subsection{Determining Peak Magnetic Fields}
-We use a $^{207}$Bi source, which emits relativistic electrons in the process of changing $^{207}$Bi into an excited state of a $^{207}$Pb nucleus. When $^{207}$Pb decays to a lower energy state, it ejects an electron from the atom. The following figure shows the changes in energy states from the original source of $^{207}$Bi to $^{207}$Pb. \\
+In order to measure the momentum and mass of an electron, we need to determine the magnetic field at which electrons are being transformed to lower energy states. As seen in the previous section, momentum can be calculated both classically and relativistically using Equation 18. Therefore, we first calculate the theoretical magnetic field strengths that would give the highest number of electron counts, where a high number of counts indicates that many electrons are being deflected in a semicircular path from the source through the slit into the detector because the magnetic field strength corresponds to where the electrons are dropping to lower energy states. \\ \\
+We use a $^{207}$Bi source, which emits relativistic electrons in the process of changing $^{207}$Bi into an excited state of a $^{207}$Pb nucleus. While an electron is emitted, another inner orbital electron is absorbed by the nucleus, converting the proton to a neutron, producing the $^{207}$Pb nucleus. When $^{207}$Pb decays to a lower energy state, it ejects an electron from the atom. The following figure shows the changes in energy states from the original source of $^{207}$Bi to $^{207}$Pb. \\
 \\
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=4in]{energylevels.png}
 \caption{Transitions of $^{207}$Bi}
 \end{center}
-\end{figure}\\
+\end{figure}
+\medskip
 In the first energy conversion, an electron goes from having 1.6334 MeV to 0.5698 MeV and in the second drop it moves from an energy state with 0.5698MeV to being ejected from the atom where it is no longer bound to an energy state. Thus, $\Delta KE_1=1.064$ MeV and $\Delta KE_2= 0.5698$ MeV. \\
 \\
 Since we know the values for the changes in kinetic energies between energy states, we can solve for relativistic momentum in terms of values that we know:
@@ -90,11 +92,11 @@ Solving for B, we can estimate our magnetic fields needed to see electron pulses
 \begin{equation}B=\frac{\sqrt{(KE+mc^2)^2-m^2c^4}}{ce(.0290m)}\end{equation}
 Before solving for B, we must account for the energy lost by each electron due to the k-shell binding energy of Lead, which is $\sim$88keV:
 \begin{equation}KE_1=1.064MeV-0.088005MeV=0.9760 MeV\end{equation}
-Now, we can substitute all of our values into equation 25 to obtain:
+Now, we can substitute all of our values into equation 25 to obtain $B_1$, which corresponds to the change of $^{207}$Bi to an excited state of $^{207}$Pb :
 \begin{equation} B_1=0.1606T=1.606kG\end{equation}
 For the second electron pulse:
 \begin{equation}KE_2=0.5689MeV-0.088005MeV=0.4809MeV\end{equation}
-Once again, using equation 11:
+Once again, using equation 11 we find $B_2$ representing the decay of $^{207}$Pb to a lower and more stable energy state:
 \begin{equation}B_2=0.0979T=0.979kG\end{equation}
 
 It is also important to consider  that the electron loses energy as it travels in the air from the source to the detector. We quantify this loss of energy in section 5.4. With theoretical values for the magnetic fields, we can determine theoretical values for momentum, which we can compare to our results:
