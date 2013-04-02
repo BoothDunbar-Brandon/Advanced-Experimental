@@ -4,6 +4,7 @@
 %\usepackage{geometry}    
 %\geometry{letterpaper}                 		
 \input preamble.tex
+
 \newcommand{\ig}[2][width=4in]{\includegraphics[#1]{#2}}    		
 \usepackage{graphicx}					
 \usepackage{amssymb}
@@ -30,19 +31,19 @@ This lab explores one of the most easily accessible expressions of relativistic 
 \section{Theory}
 
 \subsection{Energy}
-In Newtonian mechanics, kinetic energy and momentum are given by the following equations of motion:
+In Newtonian mechanics, kinetic energy($KE$) and momentum($p$) are given by the following equations of motion where m is the mass of the system:
 \begin{equation}KE= \frac{1}{2}mv^2 \end{equation}
 \begin{equation} p=mv \end{equation}
 \begin {equation}KE=\frac{p^2}{2m} \end{equation}
 
-However, when dealing with particles that are moving at the speed of light, relativistic motion must be considered. When the velocity of a particle,v, approaches the speed of light, c, the equations for energy and momentum become:
+However, when dealing with particles that are moving at the speed of light, relativistic motion must be considered. When the velocity of a particle,$v$, approaches the speed of light, $c$, the equations for energy($E$) and momentum($p$) become:
 \begin{equation} E=\gamma mc^2\end{equation}
 \begin{equation} p=\gamma mv\end{equation}
-where $\gamma$ is:
+where gamma, $\gamma$, is:
 \begin{equation} \gamma= \frac{1}{\sqrt{1-(\frac{v}{c})^2}}\end{equation}
 Therefore, total relativistic energy of a particle can be written as:
 \begin{equation} E=m_0c^2+KE=\gamma mc^2\end{equation}
-The first term of Equation 7 represents the rest-mass energy of the particle, which is an electron for the purpose of this lab. Relativistic energy is also commonly expressed in terms of momentum as given by Equation 8:
+The first term of Equation 7 represents the rest-mass energy of the particle, an electron for the purpose of this lab. Relativistic energy is also commonly expressed in terms of momentum as given by Equation 8:
 \begin{equation}E^2=p^2c^2+m_0^2c^4\end{equation}
 \subsection{Momentum and Force}
 To measure the momentum of an electron in this experiment, we observe an externally applied magnetic field which can be varied. Recalling the Lorentz force when the velocity vector of a particle is perpendicular to the magnetic field, we have a magnetic force represented as:
@@ -52,9 +53,9 @@ Since we are observing the trajectory of an electron, $q$ can be replaced with t
 A magnetic force applied perpendicular to the velocity vector of the electron will cause it to be deflected into a circular trajectory from the source, through the slit and into the detector of the apparatus. A relationship between the magnetic field and the momentum of the electron can then be developed by equating the magnetic force of the electron with the centripetal motion of the particle,$F_{mag}=F_c$:
 \begin{equation} F_c=\frac{mv^2}{R}\end{equation}
 \begin{equation} evB=\frac{mv^2}{R}.\end {equation}
-Substituting the Newtonian equation of momentum, $p=mv$, yields:
+Substituting the Newtonian equation of momentum ($p=mv$) yields:
 \begin{equation}p=eBR,\end{equation}
-To make this relation easier to work with, magnetic field is measured in Tesla($1x10^4$ Gauss), radius is measured in meters, and momentum is expressed in units of MeV/c. Substituting the value of an elementary charge and converting to these units transforms Equation 13 to:
+To put momentum ($p$) in units of $MeV/c$, magnetic field is measured in Tesla(1x$10^4$ Gauss), radius is measured in meters, and momentum is expressed in units of MeV/c. Substituting the value of an elementary charge and converting to these units transforms Equation 13 to:
 \begin{equation} p=300BR\end{equation}
 We have derived the expression for momentum in a purely classical way, however, in our experiment, the electrons are moving extremely close to the speed of light so we must validate that this relation for momentum still holds true under relativistic conditions.
 \\
@@ -65,14 +66,16 @@ The magnetic field holds true under relativistic conditions in this experiment b
 \begin{equation}p=eBR,\end{equation} which can also be written as \begin{equation} p=300BR.\end{equation} Therefore, we can conclude that the both the classical and relativistic equations of motion result in the same expression for momentum. We can use this result to find the values for a magnetic field that gives the highest count rate to calculate and electron's momentum and energy. 
 
 \subsection{Determining Peak Magnetic Fields}
-We use a $^{207}$Bi source, which emits relativistic electrons in the process of changing $^{207}$Bi into an excited state of a $^{207}$Pb nucleus. When $^{207}$Pb decays to a lower energy state, it ejects an electron from the atom. The following figure shows the changes in energy states from the original source of $^{207}$Bi to $^{207}$Pb. \\
+In order to measure the momentum and mass of an electron, we need to determine the magnetic field at which electrons are being transformed to lower energy states. As seen in the previous section, momentum can be calculated both classically and relativistically using Equation 18. Therefore, we first calculate the theoretical magnetic field strengths that would give the highest number of electron counts, where a high number of counts indicates that many electrons are being deflected in a semicircular path from the source through the slit into the detector because the magnetic field strength corresponds to where the electrons are dropping to lower energy states. \\ \\
+We use a $^{207}$Bi source, which emits relativistic electrons in the process of changing $^{207}$Bi into an excited state of a $^{207}$Pb nucleus. While an electron is emitted, another inner orbital electron is absorbed by the nucleus, converting the proton to a neutron, producing the $^{207}$Pb nucleus. When $^{207}$Pb decays to a lower energy state, it ejects an electron from the atom. The following figure shows the changes in energy states from the original source of $^{207}$Bi to $^{207}$Pb. \\
 \\
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=4in]{energylevels.png}
 \caption{Transitions of $^{207}$Bi}
 \end{center}
-\end{figure}\\
+\end{figure}
+\medskip
 In the first energy conversion, an electron goes from having 1.6334 MeV to 0.5698 MeV and in the second drop it moves from an energy state with 0.5698MeV to being ejected from the atom where it is no longer bound to an energy state. Thus, $\Delta KE_1=1.064$ MeV and $\Delta KE_2= 0.5698$ MeV. \\
 \\
 Since we know the values for the changes in kinetic energies between energy states, we can solve for relativistic momentum in terms of values that we know:
@@ -89,11 +92,11 @@ Solving for B, we can estimate our magnetic fields needed to see electron pulses
 \begin{equation}B=\frac{\sqrt{(KE+mc^2)^2-m^2c^4}}{ce(.0290m)}\end{equation}
 Before solving for B, we must account for the energy lost by each electron due to the k-shell binding energy of Lead, which is $\sim$88keV:
 \begin{equation}KE_1=1.064MeV-0.088005MeV=0.9760 MeV\end{equation}
-Now, we can substitute all of our values into equation 25 to obtain:
+Now, we can substitute all of our values into equation 25 to obtain $B_1$, which corresponds to the change of $^{207}$Bi to an excited state of $^{207}$Pb :
 \begin{equation} B_1=0.1606T=1.606kG\end{equation}
 For the second electron pulse:
 \begin{equation}KE_2=0.5689MeV-0.088005MeV=0.4809MeV\end{equation}
-Once again, using equation 11:
+Once again, using equation 11 we find $B_2$ representing the decay of $^{207}$Pb to a lower and more stable energy state:
 \begin{equation}B_2=0.0979T=0.979kG\end{equation}
 
 It is also important to consider  that the electron loses energy as it travels in the air from the source to the detector. We quantify this loss of energy in section 5.4. With theoretical values for the magnetic fields, we can determine theoretical values for momentum, which we can compare to our results:
@@ -146,14 +149,11 @@ The procedure for data taking is fairly simple once the required calibration has
 
 \section{Results $\&$ Discussion}
 To observe the magnetic field of the peak in number of counts, we took four full runs of data throughout a range of 0.6 kG to 2.0 kG. During the first three runs, we repeated the same exact steps to take points in intervals of 0.05 kG. For the fourth data set, we decided to extend in smaller intervals around the magnetic field values for which we expected to see our peaks so that we could obtain a better curve fit. We added additional points around the values of the magnetic field near 1.0 kG and 1.6 kG, which can be seen in Run 4. For the purpose of comparing our experimental values with that of which we predicted before conducting the experiment, we choose to examine runs 1 and 4 of our data. Run 1 shows a fit in equally spaced intervals and Run 4 shows an extended data set near the predicted peaks in magnetic field strength. Runs 2 and 3 will not be discussed, but are provided in the appendix to show that those data sets are very similar to Run 1. \\
-\\
-In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\
-\\
-Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 6 explicitly and in the fits given in Figures 7 and 9. 
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4 in]{run1_raw.png}
-\caption{Run 1 of data at equal intervals of magnetic field. Each data set was taken in magnetic field steps of 0.05 kG.This data includes the counts from background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts at each value for magnetic field. }
+\caption{Run 1 of data at equal intervals of magnetic field. Each data set was taken in magnetic field increments of 0.05 kG. This data includes background noise. The error bars in number of counts per 5 minutes are given by $\sqrt{N}$, where N is the number of counts recorded at each value for magnetic field. }
 \end{center}
 \end{figure}
 
@@ -185,30 +185,33 @@ Throughout the experiment, we took various counts for background, also in 5 minu
 \end{center}
 \end{figure}
 
-\begin{table}
+\begin{table}[H]
 \begin{center}
-\caption{Results of Curve Fitting}
 \begin{tabular}{|c|c|c|c|c|}\hline
 &$Peak_1$(kG) &$\sigma_1$(kG)&$Peak_2$(kG) &$\sigma_2$(kG)  \\ \hline
 Run 1 &0.9307$\pm$0.1251 & 0.3590$\pm$0.22 & 1.6558$\pm$0.0097 &0.1126$\pm$0.0119 \\ \hline
 Run 4 &0.9820$\pm$0.0189 &0.1212$\pm$0.0273 &1.6485$\pm$0.0039 &0.0910$\pm$0.0055\\ \hline
 Average &0.9564$\pm$0.1265 &0.2401$\pm$0.2217 &1.6522$\pm$0.0105 &0.1018$\pm$0.0131 \\ \hline
 \end{tabular}
+\caption{Results of curve fitting. These are the values for the magnetic fields at which the data sets have the peak number of counts. The standard deviation for the magnetic field strengths are provided, as well as the average of the values for Runs 1 and 4. The first peak of each run corresponds to the magnetic field which allows an atom of Pb to move to a lower energy state, while the second peak corresponds to the transformation of a Bi atom to a Pb atom. The formula for error calculation in the averages is given below.}
 \end{center}
-\end{table}%
-
+\end{table}
+In this experiment, our number of counts during the period in which we observe them (5 minutes intervals) is considered large enough to follow the relation of a Poisson distribution where the number of counts at any given point for the magnetic field can be written as $N\pm \sqrt(N)$, where N is the number of counts. Below, we give our results with error bars and how we fit the sum of three curves to the data in order to obtain final values for magnetic fields at the peaks and standard deviations of each curve. \\ \\
 To calculate the error in the averages given above, the propagation for adding quantities is utilized:
 \begin{equation} \delta z=\sqrt{(\delta z_1)^2 + (\delta z_2)^2} \end {equation}
+\\
+Throughout the experiment, we took various counts for background, also in 5 minutes intervals. Since we conducted the experiment in the exact same conditions each time we took data, we average the background counts and set our baseline at 17.8 counts. This baseline can be seen in Figure 6 explicitly and in the fits given in Figures 7 and 9. 
+
 
 \subsection{Calculation of Momentum}
 %e
-Since we have proved that both classical and relativistic momenta can be calculated with the same formula, we can use the following equation along with our average values of the peaks of our fit curves to determine experimental momenta:
+Since we have proved that both classical and relativistic momenta can be calculated with the same formula, we can use the following equation along with our average values of the peaks of our fit curves to determine experimental momenta where $B$ for $p_1$ is the average magnetic field strength for $Peak_1$ in Table 1 and $B$ in $p_2$ is the average magnetic field strength for $Peak_2$ in Table 1. The radius, $R$, is measured to be 0.0290$\pm$0.0005m:
 \begin{equation} p=300BR\end{equation}
 \begin{equation} p_1=300(0.09564\pm0.01265 T)(0.0290\pm 0.0005m)=0.8321\pm0.1110 MeV/c\end{equation}
 \begin{equation} p_2=300(0.16522\pm0.00105 T)(0.0290\pm 0.0005m)=1.4374\pm0.0264 MeV/c\end{equation}\\
 The error on the calculation of momentum is determined by the properties of multiplication in error propagation:
 \begin{equation} \delta p= |p|\sqrt{(\frac{\delta R}{R})^2 + (\frac{\delta B}{B})^2}\end{equation}\\
-We can analyze the difference between our estimated and experimental values for momenta by calculation the percent errors: 
+We can analyze the difference between our estimated and experimental values for momenta by calculating the percent errors. In the equations below, $p_1$ correlates to $Peak_1$ and $p_2$ correlates to $Peak_2$: 
 \begin{equation} p_{1,error}=|\frac{1.4374-1.3970}{1.3970}|=0.0289\end{equation}
 \begin{equation} p_{1,\% error}= 2.89 \% \end{equation}
 \begin{equation} p_{2,error}=|\frac{0.8321-0.8517}{0.8517}|=-0.0230\end{equation}
@@ -219,7 +222,10 @@ We could expect that there would be less error in calculating the momentum of th
 %e
 Rearranging Equation 8 given in the Theory section, we can solve for the rest mass of the electron using theoretical energy values and the momentum calculated directly above:
 \begin{equation} m_0=\sqrt{\frac{E^2-p^2c^2}{c^4}}\end{equation}
-It is important to remember here that E is the total energy of the particle in a particle energy state minus the binding energy, but including the rest mass energy of 0.511MeV, therefore \\$E_1=0.4809MeV+0.511MeV=0.9919MeV$ and $E_2=0.976MeV+0.511MeV=1.487MeV$. We can now find the rest mass using these values:
+It is important to remember here that E is the total energy of the particle in a particle energy state minus the binding energy, but including the rest mass energy of 0.511MeV, therefore: 
+\begin{equation}E_1=0.4809MeV+0.511MeV=0.9919MeV\end{equation} 
+\begin{equation}E_2=0.976MeV+0.511MeV=1.487MeV\end{equation}\\
+ We can now find the rest mass using these values:
 \begin{equation} m_0{_1}=\sqrt{\frac{(0.9919MeV)^2-(0.8321MeV/c)^2}{c^4}}=0.5399\pm0.0720 MeV/c^2\end{equation}
 \begin{equation} m_0{_2}=\sqrt{\frac{(1.487MeV)^2-(1.4374MeV/c)^2}{c^4}}=0.3809\pm0.0070 MeV/c^2\end{equation}
 The error propagation here is determined by the multiplication rules:
@@ -241,7 +247,7 @@ R_{min} = (r-\frac{x_d + x_s}{2}) = 0.0262 m
 R_{max} = (r+\frac{x_d + x_s}{2}) = 0.0318 m 
 \end{equation}  
 
-Then using Equation 18 we can use the kinetic energy of our particles to find an expression for the width of our gaussian due to the finite size of our components. 
+Then using Equation 20 we can use the kinetic energy of our particles to find an expression for the width of our gaussian due to the finite size of our components. 
 \begin{equation}
 KE =\frac{ p^{2}}{2m} = \frac{(200BR)^{2}}{2m} 
 \end{equation} 
@@ -253,11 +259,11 @@ Using Equation we can solve for $\Delta$ B.
 \begin{equation}
 \Delta B = \frac{\sqrt{2mKE}}{300}(\frac{1}{R_{max}}-\frac{1}{R_{min}})= \frac{\sqrt{2mKE}}{300}(\frac{\Delta R}{R_{max}R_{min}})
 \end{equation}
-For our first peak we use $KE_{1}$ calculated in Equation 27 and the vertical slit widths from Figure 3.
+For our first peak we use $KE_{1}$ calculated in Equation 29 and the vertical slit widths from Figure 3.
 \begin{equation}
 \Delta B_{1} = \frac{\sqrt{2(0.511)(0.9760)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0222 kG
 \end{equation}
-Do the same for the second peak with $KE_{2}$ from Equation 29.
+Do the same for the second peak with $KE_{2}$ from Equation 31.
 \begin{equation}
 \Delta B_{2} = \frac{\sqrt{2(0.511)(0.4809)}}{300}(\frac{0.00355 + .00200}{(0.0262)(0.0318)}) = 0.0156 kG
 \end{equation}
@@ -313,8 +319,9 @@ While the experimental apparatus allows for reasonable accuracy there are severa
 \end{thebibliography}
 
 \newpage \LARGE{Appendix}
+
 \begin{table}[h!]
-\caption{Run 1}
+\begin{minipage}[b]{0.45\linewidth}\centering
 \begin{tabular}{|c|c|c|} \hline
 Field	(kG)&	Counts	&	Error	\\	\hline
 0.6009	&	10	&	3.16	\\	\hline
@@ -347,9 +354,11 @@ Field	(kG)&	Counts	&	Error	\\	\hline
 1.9495	&	27	&	5.20	\\	\hline
 2.0010	&	15	&	3.87	\\	\hline
 \end{tabular}
-\end{table}
-\begin{table}
-\caption{Run 2}
+
+\end{minipage}
+%\end{table}
+%\begin{table}
+\begin{minipage}[b]{0.45\linewidth}\centering
 \begin{tabular}{|c|c|c|} \hline
 Field	&	Counts	&	Error	\\ \hline
 0.6009	&	14	&	3.74	\\ \hline
@@ -382,9 +391,11 @@ Field	&	Counts	&	Error	\\ \hline
 1.9510	&	22	&	4.69	\\ \hline
 2.0019	&	16	&	4.00	\\ \hline
 \end{tabular}
+\end{minipage}
+\caption{\textbf{Left}: First run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG. \textbf{Right}: Second run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG.}
 \end{table}
+
 \begin{table}
-\caption{Run 3}
 \begin{tabular}{|c|c|c|} \hline
 Field	&	Counts	&	Error	\\ \hline
 0.6006	&	19	&	4.36	\\ \hline
@@ -417,9 +428,12 @@ Field	&	Counts	&	Error	\\ \hline
 1.9514	&	21	&	4.58	\\ \hline
 2.0021	&	14	&	3.74	\\ \hline
 \end{tabular}
+\caption{Third run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG.}
 \end{table}
-\begin{table}
-\caption{Run 4}
+
+\pagebreak
+\begin{table}[t]
+\begin{minipage}[b]{0.45\linewidth}\centering
 \begin{tabular}{|c|c|c|} \hline
 Field (kG)	&	Counts	&	Error	\\ \hline
 2.0024	&	25	&	5.00	\\ \hline
@@ -447,6 +461,13 @@ Field (kG)	&	Counts	&	Error	\\ \hline
 1.5038	&	33	&	5.74	\\ \hline
 1.4759	&	29	&	5.39	\\ \hline
 1.4507	&	27	&	5.20	\\ \hline
+\end{tabular}
+\end{minipage}
+%\end{table}
+%\begin{table}
+\begin{minipage}[b]{0.45\linewidth}\centering
+\begin{tabular}{|c|c|c|} \hline
+Field	&	Counts	&	Error	\\ \hline
 1.4249	&	35	&	5.92	\\ \hline
 1.4019	&	33	&	5.74	\\ \hline
 1.3514	&	20	&	4.47	\\ \hline
@@ -471,10 +492,10 @@ Field (kG)	&	Counts	&	Error	\\ \hline
 0.7020	&	28	&	5.29	\\ \hline
 0.6498	&	20	&	4.47	\\ \hline
 0.6004	&	26	&	5.10	\\ \hline
-
 \end{tabular}
+\end{minipage}
+\caption{Fourth run of data taken where the counts were recorded in 5 minutes intervals as we increased the magnetic field by 0.05 kG between the range of 0.6 kG and 2.0 kG. Around the predicted peaks in counts per 5 min of about 1.0 kG and 1.6 kG, the counts per 5 min were recorded at intervals of 0.01 kG for 5 consecutive intervals in each direction of both peaks. }
 \end{table}
-
 %\begin{figure}[h!]
 %\begin{center}
 %\includegraphics[width=7.5in]{field_counts.pdf}
