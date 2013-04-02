@@ -10,18 +10,25 @@ sp = M.MCA('EPBB1.Spe')
 #Defines Data count
 counts = sp.cont
 channels = sp.chn 
- 
+#Eliminate the first couple values from the beggining of the list 'counts'
+
+edit = []
+
+for i in range(0, 100):
+	if counts[i] < 40:
+		counts.del(i)
+
+#for i in edit:
+#	counts[i] = '!'
+
+#for i in range(0,counts.count('!')):
+#	counts.remove('!')
 
 
-
-#counts2 = counts #temporary until figure out part below
 
 #Need to eliminate extreme values in the data set which are skewing the fit.
-
 #create a list of moving averages
 ma_counts = ma.movingaverage(counts, 10)
-
-
 
 #make realcounts and counts the same length by adding zeros to the end of the list
 a = ma_counts.__len__()
@@ -32,11 +39,10 @@ ma_counts.extend(zeros)
 
 counts1 = []
 
-for i in range(0, len(counts)):
-	if counts[i] > ma_counts[i] - 5 or counts[i] < ma_counts[i] + 5:
-		counts1.append(counts[i])
-	
-	
+for j in range(0, len(counts)):
+	if counts[j] > ma_counts[j] - 10 or counts[j] < ma_counts[j] + 10:
+		counts1.append(counts[j])
+		
 
 #construct channels array that is the correct length
 y = counts1.__len__()
@@ -49,15 +55,15 @@ alpha1 = lt.Parameter( 0.4, 'Alpha1')
 beta1 = lt.Parameter( 0.6, 'Beta1')
 
 #Fit each function individually then use the fit values as the starting values for the final fit, F. 
-#def f1(x):
-#	return ( a1() * np.exp(-alpha1()*x)) 
+def f1(x):
+	return ( a1() * np.exp(-alpha1()*x)) 
 
-#F1 = lt.genfit(f1, [a1, alpha1], x = channels, y = counts1) 
+F1 = lt.genfit(f1, [a1, alpha1], x = channels, y = counts1) 
 
-#def f2(x):
-#	return ( b1() * np.exp(-beta1()*x)) 
+def f2(x):
+	return ( b1() * np.exp(-beta1()*x)) 
 
-#F2 = lt.genfit(f2, [b1, beta1], x = channels, y = counts1)
+F2 = lt.genfit(f2, [b1, beta1], x = channels, y = counts1)
 
 def f(x):
 	return ( a1() * np.exp(-alpha1()*x) +b1() * np.exp(-beta1()*x)) 
