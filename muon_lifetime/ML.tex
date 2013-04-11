@@ -32,16 +32,9 @@
 \begin{equation} start: \textbf A\;and\; \textbf B \end{equation}
 \begin{equation} stop: \textbf B\; or\; \textbf C \end{equation}
 Though we choose to setup our apparatus in this way, there is also another possibility in which the $A$ and $B$ photomultipliers are used to detect the muon but then only $B$ exclusively or C detect the positron ($B$ XOR $C$). This setup guarantees that the clock would only be stopped if either $B$ or $C$ were activated, but not both since the positron only travels either up or down through the apparatus as the muon decays. However, we do not choose to set up our experiment that way because it is not likely that another muon will be detected faster than in the time scales that we are observing. Since the muon realistically only takes about 2 $\mu$s to decay, a false trigger of photomultiplier $B$ would have to take place in that much time or less. The muon sea level flux is only 1 /cm$^2$/minute or about one muon every 6x10$^7\mu$s.
-\newline \indent The Time-to-Amplitude Converter converts the times between each `start' and `stop'  to voltages. These voltages are then recorded by the Multi-Channel Analyzer which uses the computer to bin the data into a histogram based on the strengths of voltages which correspond to the lengths of times taken for each detected muon to decay. It is important to remember that the muon flux at sea level is only 1 /cm$^2$/minute, so we will need to take data sets that stretch over several days to a few weeks to get a good distribution of delay times. 
-%Add what the average counts per second for B was and discuss the rate% 
-%pmt A @1450V and 295 w/ source 50 w/o
-%pmt B @1470V and 440 with 140 w/o
-%pmt c @ 1470 V and 420 with and 80 w/o
+%Add what the average counts per second for B was and discuss the rate% and why we just leave it as b or c not b and/or c
+\newline \indent The Time-to-Amplitude Converter converts the times between each `start' and `stop'  to voltages. These voltages are then recorded by the Multi-Channel Analyzer which uses the computer to bin the data into a histogram based on the strengths of voltages which correspond to the lengths of times taken for each detected muon to decay. It is important to remember that the muon flux at sea level is only 1 /cm$^2$/minute, so we will need to take data sets that stretch over several days to a few weeks to get a good distribution of delay times. A good representation of the apparatus from the photomultiplier tubes to the logic setup and ending with the final output of time delays is shown in the figure below: 
 
-%1 micros -- 204.85 bins
-% 2- 402 bins
-% 3 -- 608
-%4-- 809 bins over
 
 \begin{figure}[H]
 \begin{center}
@@ -51,8 +44,37 @@ Though we choose to setup our apparatus in this way, there is also another possi
 \end{figure}
 
 \subsection{Procedure}
-%get voltage values for each of the detectors
-%calibrations and stuffs
+\indent \indent To obtain the clearest and best signals possible for muon detection, we must first plateau each photomultiplier so that the signal to noise ratio of each one is as ideal as possible. The noise level will increase exponentially with time, whereas the signal will reach a maximum value and then plateau. This plateau region is the voltage that we want to achieve for photomultipliers A, B and C. We use an electron source of Bismuth to plateau the detectors by placing the source in approximately the same place on the aluminum slab leading to the photomultipliers while plugging in each one individually to the counter to see the counts detected just from the source's presence over one second time intervals. We started at a voltage of about 1000V for each of the photomultipliers and increased by 100V until we reached 1400V. At that point, we increased in increments of 10V as to not exceed the maximum voltage of 1500V. The table below gives the results of the voltages at which we found the plateaus in counts and the corresponding counts both with and without a source present. 
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Photomultiplier & Voltage & Counts w/ Source & Counts w/o Source \\ \hline
+A & 1450 V & 295 & 50 \\ \hline
+B & 1450 V & 440 & 140 \\ \hline
+C & 1470 V & 420 & 80\\ \hline
+
+\end{tabular}
+\caption{Values chosen for power supplied in voltage to each photomultiplier, including the number of counts with a Bismuth source on the apparatus to no source on the apparatus. The time interval for the number of counts for all three photomultipliers is 1 second.}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Time & Bins\\ \hline
+1 $\mu$s & 204.85\\ \hline
+2 $\mu$s & 402 \\ \hline
+3 $\mu$s & 608 \\ \hline
+4 $\mu$s & 809 \\ \hline
+\end{tabular}
+\caption{Number of microseconds for which the calibration of the data has been determined to be binned. The number of bins given represents the number of bins from the left axis of the starting point in our data run. The total number of bins in our data is XXXX.}
+%how many channels did we have? 2000 something?
+\end{center}
+\end{table}
+
+% 2- 402 bins
+% 3 -- 608
+%4-- 809 bins over
 
 
 \section{Results \& Discussion}
@@ -64,7 +86,7 @@ Though we choose to setup our apparatus in this way, there is also another possi
 %
 
 \begin{thebibliography}{99}
-%\bibitem{}
+\bibitem{electron}Sleator, Tycho, and Budick, Burton, \begin{em}Muon Lifetime. \end{em}Experimental Physics. V85.0112. Spring, 2012.
 \end{thebibliography}
 
 \newpage \LARGE{Appendix}
