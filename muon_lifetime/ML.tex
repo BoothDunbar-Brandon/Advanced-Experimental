@@ -31,9 +31,8 @@
 \newline \indent In our setup, we have three photomultipliers($A, B, C$), two of which will trap the muon long enough for it to decay and a third that will help in the detection of the positron. We use the $A$ and $B$ photomultipliers to detect and trap the muon. When $A$ and $B$ are triggered, but not C, the clock will start to count until either $B$ or $C$ is triggered again by the positron and stops the clock. We do not want all three photomultipliers to be triggered when the muon is detected because the time delay will be irrelevant since the clock will start and stop almost instantaneously. We need the muon to be trapped by two photomultipliers and the resulting positron to be detected by one of the photomultipliers. Therefore, the start and stops of the clock correspond to:
 \begin{equation} start: \textbf A\;and\; \textbf B \end{equation}
 \begin{equation} stop: \textbf B\; or\; \textbf C \end{equation}
-Though we choose to setup our apparatus in this way, there is also another possibility in which the $A$ and $B$ photomultipliers are used to detect the muon but then only $B$ exclusively or C detect the positron ($B$ XOR $C$). This setup guarantees that the clock would only be stopped if either $B$ or $C$ were activated, but not both since the positron only travels either up or down through the apparatus as the muon decays. However, we do not choose to set up our experiment that way because it is not likely that another muon will be detected faster than in the time scales that we are observing. Since the muon realistically only takes about 2 $\mu$s to decay, a false trigger of photomultiplier $B$ would have to take place in that much time or less. The muon sea level flux is only 1 /cm$^2$/minute or about one muon every 6x10$^7\mu$s.
-%Add what the average counts per second for B was and discuss the rate% and why we just leave it as b or c not b and/or c
-\newline \indent The Time-to-Amplitude Converter converts the times between each `start' and `stop'  to voltages. These voltages are then recorded by the Multi-Channel Analyzer which uses the computer to bin the data into a histogram based on the strengths of voltages which correspond to the lengths of times taken for each detected muon to decay. It is important to remember that the muon flux at sea level is only 1 /cm$^2$/minute, so we will need to take data sets that stretch over several days to a few weeks to get a good distribution of delay times. A good representation of the apparatus from the photomultiplier tubes to the logic setup and ending with the final output of time delays is shown in the figure below: 
+Though we choose to setup our apparatus in this way, there is also another possibility in which the $A$ and $B$ photomultipliers are used to detect the muon but then only $B$ exclusively or C detect the positron ($B$ XOR $C$). This setup guarantees that the clock would only be stopped if either $B$ or $C$ were activated, but not both since the positron only travels either up or down through the apparatus as the muon decays. However, we do not choose to set up our experiment that way because it is not likely that another muon will be detected faster than in the time scales that we are observing. Since the muon realistically only takes about 2 $\mu$s to decay, a false trigger of photomultiplier $B$ would have to take place in that much time or less. During calibration, we find that $B$ receives about 50 counts per second. Therefore, it is triggered about 10$^{-4}$ times within the muon lifetime of approximately 2$\mu$s, making it nearly impossible to detect a muon in the same time span that one is already decaying. It is also important to remember that muons are only reaching the Earth's surface at a  muon sea level flux of only 1 /cm$^2$/minute or about one muon every 6x10$^7\mu$s.
+\newline \indent As the photomultipliers are triggered, Time-to-Amplitude Converter converts the times between each `start' and `stop'  to voltages. These voltages are then recorded by the Multi-Channel Analyzer which uses the computer to bin the data into a histogram based on the strengths of voltages which correspond to the lengths of times taken for each detected muon to decay. It is important to remember that the muon flux at sea level is only 1 /cm$^2$/minute, so we will need to take data sets that stretch over several days to a few weeks to get a good distribution of delay times. A good representation of the apparatus from the photomultiplier tubes to the logic setup and ending with the final output of time delays is shown in the figure below: 
 
 
 \begin{figure}[H]
@@ -58,6 +57,7 @@ C & 1470 V & 420 & 80\\ \hline
 \end{center}
 \end{table}
 
+Data sets are taken on time scales of several days to a few weeks to obtain a result with reasonable precision. As discussed earlier, muons are not reaching the Earth at a very high rate, but furthermore, they are not being stopped in our apparatus 100\% of the time that they reach the ground. Therefore, longer time scales are more suitable to analyze the range of time delays that are used to determine the muon lifetime. After data has been obtained, it is important to calibrate the Time-Amplitude Converter to remove extraneous results that may be time delays that are too large to be feasible with the rest of the data set or even too small. The following table shows corresponding values for the amount of time lapsed in comparison to the matching bin number. The total number of bins observed with both the one week long and two week long data set is set to be 2048. Therefore, about 10\% of the total number of bins represent time delays of 1$\mu$s or less, whereas about 60\% of the bins correspond to time delays of 4$\mu$s or greater. 
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{|c|c|}\hline
@@ -67,8 +67,7 @@ Time & Bins\\ \hline
 3 $\mu$s & 608 \\ \hline
 4 $\mu$s & 809 \\ \hline
 \end{tabular}
-\caption{Number of microseconds for which the calibration of the data has been determined to be binned. The number of bins given represents the number of bins from the left axis of the starting point in our data run. The total number of bins in our data is XXXX.}
-%how many channels did we have? 2000 something?
+\caption{Number of microseconds for which the calibration of the data has been determined to be binned. The number of bins given represents the number of bins from the zeroeth bin in our data run. The total number of bins  is 2048.}
 \end{center}
 \end{table}
 
@@ -83,7 +82,7 @@ Time & Bins\\ \hline
 \section{Conclusion}
 %Ekta
 % final time
-%
+%how errors could be minimized or eliminated.
 
 \begin{thebibliography}{99}
 \bibitem{electron}Sleator, Tycho, and Budick, Burton, \begin{em}Muon Lifetime. \end{em}Experimental Physics. V85.0112. Spring, 2012.
