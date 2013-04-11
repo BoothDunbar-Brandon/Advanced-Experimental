@@ -1,0 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def Y(theta):
+    return r1*np.cos(theta)
+
+thetas=np.arange(0,90,0.1)
+print Y(thetas)
