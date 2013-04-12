@@ -143,7 +143,7 @@ lt.plot_line(F.xpl, F.ypl,
 handles, labels = ax.get_legend_handles_labels()
 ax.legend(handles, labels)
 
-plt.savefig('graph_{0}_DbleExp'.format(filename), format ="png")
+plt.savefig('graph_{0}_DbleExp.png'.format(filename))
 
 #Plot 2 - Double v. Single Exponential Fit
 fig = plt.figure()
@@ -174,7 +174,7 @@ lt.plot_line(L.xpl, L.ypl,
 handles, labels = ax.get_legend_handles_labels()
 ax.legend(handles, labels)
 
-plt.savefig('graph_{0}_DbleVSnglExp'.format(filename), format ="png")
+plt.savefig('graph_{0}_DbleVSnglExp.png'.format(filename))
 
 #Plot 3 - Each part of the fit
 fig = plt.figure()
@@ -220,6 +220,6 @@ lt.plot_line(x, final2(x),
 handles, labels = ax.get_legend_handles_labels()
 ax.legend(handles, labels)
 
-plt.savefig('graph_{0}_CompExp'.format(filename), format ="png")
+plt.savefig('graph_{0}_CompExp.png'.format(filename))
 
 
