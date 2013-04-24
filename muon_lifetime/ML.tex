@@ -24,7 +24,7 @@
 %Brandon
 \indent \indent Cosmic ray showers produce positively charged muons from $\pi$ meson decay high up in the atmosphere. While the half life of the $\mu^+$ is only around 2$\mu s$ relativistic time dilation results in a flux at sea level of around $1/cm^2/min$.  In this experiment we are interested primarily in the decay process of $\mu^+$ which is governed by the following equation:
 \begin{equation}
-	mu^+ \rightarrow e^+ + \nu_e + \bar{\nu_e}
+	\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu_e}
 \end{equation}
 \indent \indent As with most decays we can describe the decay probability as a function of time using a negative exponential of the form:
 \begin{equation}
@@ -100,10 +100,10 @@ Time & Bins\\ \hline
 \indent \indent The output from the computer software used to gather data is given in the form of bins and counts.  The bin data set is a discrete integer ranging from 1 to 2048 and acts as a measure of the time-scale which we calibrated in the previous section.  The counts data set is the number of events that were recorded with a certain decay rate as indicated by the bin number.\\
 \indent \indent In order to get the data ready for fitting we altered it in two ways:
 \begin{enumerate}
-\item There were a number of 'dead' bins at the front of the data set which if left unaltered would skew the fit with outlier values.  In order to eliminate these bins we filtered our data for any bins in the first 200 that had a corresponding counts value of less than 10.  
-\item We then further eliminated outliers in the data by establishing a variability threshold of $\pm \frac{moving-average}{2}$.  The moving average was computed over the 10 surrounding values.  Both increasing  the number of values used to compute the moving average as well as increasing the factor on the bottom will make this a more stringent criteria.
+\item There were a number of `dead' bins at the front of the data set which if left unaltered would skew the fit with outlier values.  In order to eliminate these bins we filtered our data for any bins in the first 200 that had corresponding count values of less than 10.  
+\item We then further eliminated outliers in the data by establishing a variability threshold of $\pm \frac{moving-average}{2}$.  The moving average was computed over the 10 surrounding values.  Both increasing  the number of values used to compute the moving average as well as increasing the factor on the bottom, making this a more stringent criteria.
 \end{enumerate}
-\indent \indent After filtering the values in this manner we then converted our bins to the correct time scale using our calibration data given in Table 2 and normalized the counts portion by dividing by the total number of counts in the data set for the reasons outlined at the begging of this section. Using this data we performed our exponential fit the results of which can be seen below. For documentation on how the fit is performed by the LabTools package please see the link in the References section.
+\indent \indent After filtering the values in this manner we then converted our bins to the correct time scale using our calibration data given in Table 2 and normalized the counts portion by dividing by the total number of counts in the data set for the reasons outlined at the beginning of this section. Using this data we performed our exponential fit, the results of which can be seen below. For documentation on how the fit is performed by the LabTools package please see the link in the References section.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4 in]{graph_EPBB1_SnglExp.png}
@@ -120,7 +120,7 @@ Time & Bins\\ \hline
 
 From the graphs above we can find the decay time from Eq. 3. For the first data set we found a mean lifetime of 2.178 $\mu s$ and for the second data set we found a mean lifetime of 2.272 $\mu s$.  The error on this value is given as extraordinarily large, more than a 1000x the actual value but this is more a result of the fitting process than a real representation of experimental error.  It is instead more beneficial to explore the $\chi^2$ value of the fit for an indicator of error in our functional form and fit choice.  The $\chi^2$ significance value for the first set of data is $8.12 x 10^-5$ while the $\chi^2$ for the second set of data is $7.78 x 10^-5$. The $\chi^2$ significance value tells us to what probability we can say that our fit is correct, the smaller the $\chi^2$ significance the better the fit describes the data. As you can see our extraordinarily small values show that our fit choice both in functional form and in the results themselves are very suited to the data we have gathered. 
 
-\indent \indent The lab manual asks us to calculate the flux per square centimetre  at sea level which we can do for the first set of data since the total run time vs. number of events is known but we cannot find this for the second set of data because we are not sure at which time the apparatus reached the maximum number of events it could record.  Using Eq. 4 we find that with 23315 total events and 10,020 min total runtime over an area of AREA OF DETECTOR the flux at sea level is roughly NUMBER.  
+\indent \indent The lab manual asks us to calculate the flux per square centimetre  at sea level which we can do for the first set of data since the total run time vs. number of events is known but we cannot find this for the second set of data because we are not sure at which time the apparatus reached the maximum number of events it could record.  Using Eq. 4 we find that with 23315 total events and 10,020 min total runtime over an area of AREA OF DETECTOR, the flux at sea level is roughly NUMBER.  
 
 
 \section{Additional Analysis \& Conclusion}
@@ -129,7 +129,7 @@ From the graphs above we can find the decay time from Eq. 3. For the first data 
 	\mu^- \rightarrow e^- + \nu_e + \bar{\nu_e}
 \end{equation}
 
-\indent \indent We can account for this second decay mode by fitting a double exponential instead of a single exponential to our data.  We did this for both data sets, the figures can be seen below.  In addition to the data fit we added an 'ideal' fit using accepted ratios for positive to negative muon decay.  
+\indent \indent We can account for this second decay mode by fitting a double exponential instead of a single exponential to our data.  We did this for both data sets, the figures can be seen below.  In addition to the data fit we added an `ideal' fit using accepted ratios for positive to negative muon decay.  
 
 \begin{figure}[H]
 \begin{center}
