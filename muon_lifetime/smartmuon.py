@@ -1,5 +1,5 @@
 #Usage: type in terminal:
-#	smartmuon.py "filename"
+#	python smartmuon.py "filename"
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -7,10 +7,13 @@ import LT.box as lt
 import LT.MCA as M
 import movingaverage as ma
 import sys
+import os
 
-#Gets Data from file
-filename = sys.argv[1]
-sp = M.MCA(filename)
+#Gets Data from file and establishes filename without extension
+path = sys.argv[1]
+split = os.path.splitext(path)
+filename = split[0]
+sp = M.MCA(path)
 counts = sp.cont
 channels_original = sp.chn 
 
@@ -52,12 +55,15 @@ microsec = np.arange(1, len(per_microsec) + 1)
 calibration = np.mean(per_microsec / microsec)
 timescale = channels / calibration
 
-#Create 'Normalized' y-axis
+#Create 'Normalized' y-axis (i.e. the function integrates to 1)
 normcounts = []
 norm = np.sum(counts1)
 for k in counts1:
 	x = k * (1/norm)
 	normcounts.append(x)
+print(norm)
+
+assert(False)
 
 #Defines the parameters and initial guess values
 lambda1 = lt.Parameter(0.5, 'Lambda1')
@@ -145,7 +151,7 @@ ax.legend(handles, labels)
 
 plt.savefig('graph_{0}_DbleExp.png'.format(filename))
 
-#Plot 2 - Double v. Single Exponential Fit
+#Plot 2 - Single Exponential Fit
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
@@ -159,12 +165,6 @@ lt.plot_exp(timescale, normcounts,
 	y_label = 'Number Density ($\%$ of total detected)',
 	plot_title = 'Muon Decay, Double vs. Single Exponential Fit'), 
 
-lt.plot_line(F.xpl, F.ypl, 
-	linewidth = 1.5,
-#	linestyle = '',
-	color = 'b',
-	label = r'Double Exponential: $\alpha$ = {0}   $\beta$ = {1}'.format(alpha1r, beta1r))
-
 lt.plot_line(L.xpl, L.ypl,
 	linewidth = 1.5,
 #	linestyle = '',
@@ -174,7 +174,7 @@ lt.plot_line(L.xpl, L.ypl,
 handles, labels = ax.get_legend_handles_labels()
 ax.legend(handles, labels)
 
-plt.savefig('graph_{0}_DbleVSnglExp.png'.format(filename))
+plt.savefig('graph_{0}_SnglExp.png'.format(filename))
 
 #Plot 3 - Each part of the fit
 fig = plt.figure()

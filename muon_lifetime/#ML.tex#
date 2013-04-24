@@ -17,28 +17,15 @@
 
 \section{Abstract}
 %Ekta
-\begin{em} Positively charged muons reach the Earth via cosmic ray showers.When they decay, the muons break down into a positron, an electron neutrino and a muon neutrino.The goal of the experiment is to measure the lifetime of the muon by detecting and stopping a positive muon in an aluminium slab and then consequently detected the positron that it leaves behind when it decays.The distribution of the difference in detection times can be used to determine the muon lifetime.
+\begin{em} Positively charged muons reach the Earth via cosmic ray showers.When they decay, the muons break down into a positron, an electron neutrino and a muon neutrino.The goal of the experiment is to measure the lifetime of the muon by detecting and stopping a positive muon in an aluminum slab and then consequently detected the positron that it leaves behind when it decays.The distribution of the difference in detection times can be used to determine the muon lifetime.
 \end{em}
 
 \section{Theory}
 %Brandon
-\indent \indent Cosmic ray showers produce positively charged muons from $\pi$ meson decay high up in the atmosphere. While the half life of the $\mu^+$ is only around 2$\mu s$ relativistic time dilation results in a flux at sea level of around $1/cm^2/min$.  In this experiment we are interested primarily in the decay process of $\mu^+$ which is governed by the following equation:
+\indent \indent Cosmic ray showers produce positively charged muons from $\pi$ meson decay high up in the atmosphere. While the half life of the $\mu^+$ is only around 2$\mu s$ relativistic time dilation results in a flux at sea level of around $1/cm^2/min$.  In this experiment we are interested in the decay process of $\mu^+$ which is governed by the following equation:
 \begin{equation}
-	mu^+ \rightarrow e^+ + \nu_e + \bar{\nu_e}
+	mu^+ \rightarrow e^+ + \nu_e + \={\nu}_e
 \end{equation}
-\indent \indent As with most decays we can describe the decay probability as a function of time using a negative exponential of the form:
-\begin{equation}
-P_{decay}(t) = A e^{-\alpha t}
-\end{equation}
-\indent \indent \indent \indent where 
-\begin{equation}
-\alpha = \frac{1}{\tau}
-\end{equation}
-\indent \indent The flux per a unit area can also be calculated in this experiment and is found by a relation between the number of events detected and the total time detectors were running. Then adjust for the area of the detectors to obtain a base unit value. 
-\begin{equation}
-\frac{Total-Events}{Total-Time} X \frac{1}{Detector-Area} = \frac{Events}{Time-Area}
-\end{equation}
-
 
 
 \section{Experimental Methods}
@@ -96,76 +83,8 @@ Time & Bins\\ \hline
 
 \section{Results \& Discussion}
 %Brandon
-\indent \indent For this experiment we took two runs of data; the first for a 7 day interval and the second for 14 days.  The second run of data reached the maximum number of recorded events for the data collection program some time during the second week. In order to make it so that we can compare the two sets of data without knowing the relative total collection time we will divide by the total number of events in each data set and express the fit as a probability density function which gives us the percent chance of detecting an event with a certain decay time. It is usually best to express your results as intensive properties such as probability density functions because it allows for easy comparison to other data sources.\\
-\indent \indent The output from the computer software used to gather data is given in the form of bins and counts.  The bin data set is a discrete integer ranging from 1 to 2048 and acts as a measure of the time-scale which we calibrated in the previous section.  The counts data set is the number of events that were recorded with a certain decay rate as indicated by the bin number.\\
-\indent \indent In order to get the data ready for fitting we altered it in two ways:
-\begin{enumerate}
-\item There were a number of 'dead' bins at the front of the data set which if left unaltered would skew the fit with outlier values.  In order to eliminate these bins we filtered our data for any bins in the first 200 that had a corresponding counts value of less than 10.  
-\item We then further eliminated outliers in the data by establishing a variability threshold of $\pm \frac{moving-average}{2}$.  The moving average was computed over the 10 surrounding values.  Both increasing  the number of values used to compute the moving average as well as increasing the factor on the bottom will make this a more stringent criteria.
-\end{enumerate}
-\indent \indent After filtering the values in this manner we then converted our bins to the correct time scale using our calibration data given in Table 2 and normalized the counts portion by dividing by the total number of counts in the data set for the reasons outlined at the begging of this section. Using this data we performed our exponential fit the results of which can be seen below. For documentation on how the fit is performed by the LabTools package please see the link in the References section.
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=4 in]{graph_EPBB1_SnglExp.png}
-\caption{Data Set 1 Single Exponential Fit}
-\end{center}
-\end{figure}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=4 in]{graph_EPBB2_SnglExp.png}
-\caption{Data Set 2 Single Exponential Fit}
-\end{center}
-\end{figure}
-
-From the graphs above we can find the decay time from Eq. 3. For the first data set we found a mean lifetime of 2.178 $\mu s$ and for the second data set we found a mean lifetime of 2.272 $\mu s$.  The error on this value is given as extraordinarily large, more than a 1000x the actual value but this is more a result of the fitting process than a real representation of experimental error.  It is instead more beneficial to explore the $\chi^2$ value of the fit for an indicator of error in our functional form and fit choice.  The $\chi^2$ significance value for the first set of data is $8.12 x 10^-5$ while the $\chi^2$ for the second set of data is $7.78 x 10^-5$. The $\chi^2$ significance value tells us to what probability we can say that our fit is correct, the smaller the $\chi^2$ significance the better the fit describes the data. As you can see our extraordinarily small values show that our fit choice both in functional form and in the results themselves are very suited to the data we have gathered. 
-
-\indent \indent The lab manual asks us to calculate the flux per square centimetre  at sea level which we can do for the first set of data since the total run time vs. number of events is known but we cannot find this for the second set of data because we are not sure at which time the apparatus reached the maximum number of events it could record.  Using Eq. 4 we find that with 23315 total events and 10,020 min total runtime over an area of AREA OF DETECTOR the flux at sea level is roughly NUMBER.  
-
-
-\section{Additional Analysis \& Conclusion}
-\indent \indent In addition to the single exponential fit asked for in the lab manual we also performed a double exponential fit to account for the fact that muon pairs are produced in cosmic ray showers resulting in the detection of both positive and negative muon decays. Aluminium is a type of exotic atom known as a muonic atom which can capture a negative muon in an inner orbit and eject the farthest valence electron.  The negative muon will maintain this position until it decays following the equation:
-\begin{equation}
-	\mu^- \rightarrow e^- + \nu_e + \bar{\nu_e}
-\end{equation}
-
-\indent \indent We can account for this second decay mode by fitting a double exponential instead of a single exponential to our data.  We did this for both data sets, the figures can be seen below.  In addition to the data fit we added an 'ideal' fit using accepted ratios for positive to negative muon decay.  
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=4 in]{graph_EPBB1_DbleExp.png}
-\caption{Data Set 1 Double V. Single Exponential Fit}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=4 in]{graph_EPBB2_DbleExp.png}
-\caption{Data Set 2 Double V. Single Exponential Fit}
-\end{center}
-\end{figure}
-
-\indent \indent The $\chi^2$ improved by $0.07 x 10^-5$  for the first set of data and $0.02 x 10^-5$. This improvement may not seem very large but considering the size of our original answer this is a good improvement. 
-
-\indent \indent In order to emphasize the importance of including both decay paths in our fit the figures below separate out the respective contributions to our fit from the positive and negative muon decays. 
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=4 in]{graph_EPBB1_CompExp.png}
-\caption{Data Set 1 Positive and Negative Contributions to Fit}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=4 in]{graph_EPBB2_CompExp.png}
-\caption{Data Set 2 Positive and Negative Contributions to Fit}
-\end{center}
-\end{figure}
-
-As can be seen from the above figures the positive muon decay is dominant in the shorter decay times while the negative muon due to absorption into the aluminium atom is dominant in the longer decay times.  
-
-
+\section{Conclusion}
 %Ekta
 % final time
 %how errors could be minimized or eliminated.
