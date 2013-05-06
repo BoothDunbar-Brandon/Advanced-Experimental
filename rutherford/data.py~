@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+length=np.arange(3,18.5,0.5)
+print length
+
+counts=[1551,1487,1519,1604,1633,1705,1650,1752,1660,1791,1783,1845,1843,1925,1867,1869,1936,1838,1838,1741,1748,1730,1787,1513,1460,1217,1218,985,847,632,465]
+plt.plot(length, counts)
+#add error bars
+plt.plot(Y,f(Y))
+plt.xlabel('Y (cm)')
+plt.ylabel('f(Y)')
+plt.show()

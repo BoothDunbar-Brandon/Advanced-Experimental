@@ -11,9 +11,9 @@ def f(Y):
     X=7.22
     return a*b/np.sin(0.5*(np.arctan(r1/X)+np.arctan(r1/Y)))**4
 
-Y=np.arange(1,20,0.01)
+Y=np.arange(0,20,0.01)
 plt.plot(Y,f(Y))
 plt.xlabel('Y (cm)')
 plt.ylabel('f(Y)')
 plt.savefig('preliminary_plot.pdf')
-#plt.show()
+plt.show()
