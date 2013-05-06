@@ -16,7 +16,7 @@
 \author{Ekta Patel \& Brandon Booth-Dunbar}
 
 \section{Abstract}
-\begin{em} In this lab, we verify the Rutherford formula for nuclear scattering in 1909. Their experiment led to the confirmation of the existence of an atomic nucleus, thus destroying the plum pudding model  developed by J. J. Thomson. Rutherford's team successfully disproved Thomson's model by observing a significant amount of charged alpha particles scattering back from a thin sheet of gold foil rather than passing through it with only a few deflections. Therefore, they were able to confirm that an atom consists of a dense nucleus surrounded by a less dense cloud of electrons surrounding the heavy nucleus, instead of an even distribution of mass throughout the atom. The distribution of alpha particles scattered by gold foil can be observed as a function of the scattering angle, which relies on the distance between the foil and a detector. \end {em}
+\begin{em} In this lab, we verify the Rutherford formula for nuclear scattering in 1909. Their experiment led to the confirmation of the existence of an atomic nucleus, thus destroying the plum pudding model  developed by J. J. Thomson. Rutherford's team successfully disproved Thomson's model by observing a significant amount of charged alpha particles scattering back from a thin sheet of gold foil rather than passing through it with only a few deflections. Therefore, they were able to confirm that an atom consists of a dense nucleus surrounded by a less dense cloud of electrons surrounding the heavy nucleus, instead of an even distribution of mass throughout the atom. The distribution of alpha particles scattered by gold foil can be observed as a function of the scattering angle, which relies on the distance between the foil and the gold source. \end {em}
 
 \section{Theory}
 %B&E
@@ -56,7 +56,7 @@ Using Equations \ref{simple} and \ref{complicated}, solving the equation for $f(
 \begin{equation} sin\theta_2^2=\frac{r_1^2}{Y^2+r_1^2}, \end{equation} therefore:
 \begin{equation} f(Y)= \frac{\frac{Y}{\sqrt{Y^2+r_1^2}} \frac{r_1^2}{Y^2+r_1^2}}{sin(0.5(tan^{-1}\left(\frac{r_1}{X}\right) + tan^{-1}\left(\frac{r_1}{Y}))\right)^4.} \end{equation}\\
 We know the following quantities as they are given in the lab manual because we cannot open the apparatus and check them for ourselves:
-\begin{table}
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|}\hline
 Quantity & Description \\ \hline 
@@ -66,6 +66,7 @@ $r_i=2.30cm$ & radius of the inside of the scattering foil\\ \hline
 $r_o=2.70cm$ & radius of the outside of the scattering foil\\ \hline
 $r_d=0.48cm$ & radius of the detector\\ \hline
 \end{tabular}
+\caption{Several components of the apparatus that have been measured for us so that we do not have to disassemble the radioactive source.}
 \end{center}
 \end{table}
 Plotting this function for f(Y) over an interval of 0 to 20cm, we have:
@@ -77,21 +78,74 @@ Plotting this function for f(Y) over an interval of 0 to 20cm, we have:
 \end{figure}
 
 \subsection{Determining $G$ \& $N_0$}
-\begin{figure}[h!]
+%EKTA FINISH THIS SECTION
+Figure 3 below shows our preliminary data set taken over a range from 3cm to 18cm in 1cm intervals. At each value for Y, the distance from the gold foil to the source, we counted for 20 minutes. Our data shows a peak around 10cm as opposed to the 8cm prediction given in the angular distribution plot above. It can be seen however, that the peak distance is relative to where on the apparatus one begins to record data. The axis on which we can move the source in an out of the apparatus chamber was measured to be 19.7cm$\pm$.01cm long. The length along this axis at which we choose to begin measurements however, is dependent on our gains for the linear amplifier in the electronic schematic of the apparatus, and therefore arbitrary to the length at which we make our zero reference point. Since we are able to tune our discriminator so that about 20\% of the alpha particles are rejected, our data is simply shifted along the $Y$ parameter by about 3 centimeters in the positive direction. 
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=4in]{firstrun.pdf}
 \caption{The first run of data taken from 3cm to 18cm in intervals of 1cm.}
 \end{center}
 \end{figure}
-
-\begin{figure}[h!]
+After seeing a curve that represented the same shape as that of $f(Y)$, we went back and collected data in between the intervals we previously recorded so that we could have a full set of data from 3cm to 18cm in 0.5cm steps. 
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=4in]{secondrun.pdf}
-\caption{The first run of data taken from 3cm to 18cm in intervals of 1cm with additional points taken in intervals of 0.5cm to obtain more statistics.}
+\caption{The first run of data taken from 3cm to 18cm in intervals of 1cm combined  with an additional run with points taken in intervals of 0.5cm to obtain more statistics.}
 \end{center}
 \end{figure}
+
+Since we cannot find a value for $N_0$ directly because it would require dissembling the apparatus chamber and placing the detector directly next to the source, we can indirectly calculated it using the three values that we know or have measured, $G$, $N_2$, and $f(Y)$. First, G is simple a factor that is a result of combination of known values in this apparatus. 
+\begin{equation}G=\frac{nA_2Z^2z^2e^4k^2}{R_1^2r_1^2  E^2}\end{equation}
+That factors that are included in $G$ are listed below:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+Quantity & Description & Value\\ \hline
+ $n=\left(\frac{\rho N_A}{A_g}\right)A_1 t$ & Total number of scattering centers& $1.491\times10^{19}$ \\ \hline
+ $\rho$ & Density of Gold &$1.93\times10^4 kg/m^3$ \\ \hline
+$N_A$ & Avogadro's Number &  $6.022\times10^{23}$\\ \hline
+$A_g$ & Atomic weight of Gold & $196.97 u= 0.197 kg/mol$ \\ \hline
+$A_1=\pi r_o^2-\pi r_i^2 $ & Area of scatting foil& $1.257\times10^{-4} m^2$ \\ \hline
+ $t$ & Thickness of scattering foil & $2\times10^{-6} m$\\ \hline
+$A_2=\pi r_d^2$ & Area of the detector & $1.508\times10^{-4}m^2$\\ \hline
+$Ze$ & Nuclear charge &$79\times (1.6\times^10^{-19} C)$\\ \hline
+$ze$ & Alpha particle charge & $2\times(1.6\times^10^{-19} C)$\\ \hline
+$E$ & Energy of scattered particle &$4.4MeV=7.0496\times10^{-13}J$\\ \hline
+$R_1$ & Hypotenuse from source to scattering foil& $0.03118m$\\ \hline
+$r_1$ & Average scattering center & $0.025 m$ \\ \hline
+$k$ & Coulomb's constant & $9\times10^9 N\cdot m/ C^2$\\ \hline
+
+\end{tabular}
+\caption{All values needed to calculate the factor G as given by the lab manual and the period table.}
+\end{center}
+\end{table}
+Therefore, $G=8.932\times10^{-6}$. We cannot propagate error on the value for $G$ because the values that we are using are taken for granted since we cannot make our measurements of the apparatus that are inside the chamber. We can now use the calculated value for $G$, the angular distribution $f(Y)$ and the experimentally collected count rates, $N_2$ to determine $N_0$. 
+%%%%% error propagation, what do our results mean, anything else i forgot?
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=5in]{N2.pdf}
+\caption{The calculated value for $N_2$ is shown in red, while our experimental value for $N_2$ is given in the blue data points with error bars corresponding to $\sqrt{\#\; of\; counts}$ per data point.}
+\end{center}
+\end{figure}
+
 \subsection{Finding the Atomic Number ($Z$)}
+The atomic number of gold, given by $Z$, cannot be found using our data because we would need to disassemble the apparatus and place the source right next to the detector in order to determine the proper value for $N_0$. $Z$ is a factor in $G$, so when we rearrange Equation \ref{simple} appropriately, we have: 
+\begin{equation}G(Z)= \frac{N_2}{N_0 \times f(Y)}. \end {equation} 
+In the above equation, we have values for $N_2$ and a distribution to represent $f(Y)$, but if we cannot experimentally determine $N_0$,  we do not have enough known variables to solve for $Z$. Therefore, we accept that the atomic number of Gold is 79 as given by the periodic table. 
 \subsection{Calculating the Nuclear Radius Upper Limit}
+The upper limit of the nucleus radius can be determined from the impact parameter, $b$, which we derived earlier in section 2. It is the distance from the center of the alpha particle to the center of the nucleus. The alpha particles do not have enough force to penetrate the nucleus a significant amount compared to the radius of the nucleus, so even though $b$ is the sum of the alpha particle radius and the nucleus radius, we can assume that it is a good approximation for the upper limit of the nuclear radius. Therefore, we know that $b$ is: \begin{equation} \label{b}b= \frac{Zze^2}{2\pi \epsilon_0 mv^2}.\end{equation} Here, we are also making the assumption that the alpha particles hits the nucleus head on and deflects back along a straight line 180$^\circ$ from its initial impact. The quantities in Equation \ref{b} are:
+\begin{itemize}
+\item $Ze=79\times (1.6\times^10^{-19} C)$
+\item $ze= 2\times(1.6\times^10^{-19} C)$
+\item $\frac{1}{4\pi\epsilon_0}=9\times10^9 N\cdot m/ C^2$
+\item $m=6.7\times10^{-27} kg$
+\item $v=2\times 10^7 m/s$
+\end{itemize}
+Therefore, \begin{equation} b= \frac{(79\times (1.6\times^10^{-19} C))(2\times(1.6\times^10^{-19} C))(9\times10^9 N\cdot m/ C^2)}{(6.7\times10^{-27} kg)(2\times 10^7 m/s)^2}=2.7\times10^{-14}m.\end{equation}
+The upper limit on the nuclear radius of Gold is $2.7\times10^{-14}$m as calculated from the parameters given the setup that we have for this experiment.
+
 
 \section{Conclusion}
 %Brandon
@@ -100,4 +154,53 @@ Plotting this function for f(Y) over an interval of 0 to 20cm, we have:
 \begin{thebibliography}{99}
 \bibitem{electron}Sleator, Tycho, and Windt, David, \begin{em}Rutherford Scattering. \end{em}Experimental Physics. V85.0112. Spring, 2011.
 \end{thebibliography}
+
+\section{Appendix}
+\begin{table}[H]
+\begin{tabular}{|c|c|}\hline
+Y (cm) & Counts/ 20 min\\ \hline
+3.0 & 465  \\ \hline
+4.0 &  847 \\ \hline
+5.0 &  1218 \\ \hline
+6.0 &  1460 \\ \hline
+7.0 &  1727\\ \hline
+8.0 &  1748 \\ \hline
+9.0 &  1838\\ \hline
+10.0 &  1936\\ \hline
+11.0 &  1867\\ \hline
+12.0 &  1843\\ \hline
+13.0 &  1783\\ \hline
+14.0 &  1660\\ \hline
+15.0 &  1650\\ \hline
+16.0 & 1633 \\ \hline
+17.0 &  1519\\ \hline
+18.0 &  1551\\ \hline
+\end {tabular}
+\caption{First run of data taken from 3cm to 18cm in intervals of 1cm.}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|c|c|}\hline
+Y (cm) & Counts/ 20 min\\ \hline
+3.5 & 632 \\ \hline
+4.5 &  985 \\ \hline
+5.5 &  1217 \\ \hline
+6.5 &  1513 \\ \hline
+7.5 &  1730\\ \hline
+8.5 &  1741 \\ \hline
+9.5 &  1838\\ \hline
+10.5 &  1869\\ \hline
+11.5 &  1925\\ \hline
+12.5 &  1845\\ \hline
+13.5 &  1791\\ \hline
+14.5 &  1752\\ \hline
+15.5 &  1705\\ \hline
+16.5 & 1604\\ \hline
+17.5 &  1487\\ \hline
+\end{tabular}
+\caption{Second run of data taken from 3.5 cm to 17.5cm in intervals of 1cm.}
+\end{table}
+
 \end{document}
+
+

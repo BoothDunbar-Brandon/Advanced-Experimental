@@ -13,8 +13,8 @@ print max(f(Y))
 
 length1=np.arange(3,19,1.0)
 length2=np.arange(3,18.5,0.5)
-counts1=[1551,1519,1633,1650,1660,1783,1843,1867,1936,1838,1748,1727,1460,1218,847,465]
-counts2=[1551,1487,1519,1604,1633,1705,1650,1752,1660,1791,1783,1845,1843,1925,1867,1869,1936,1838,1838,1741,1748,1730,1727,1513,1460,1217,1218,985,847,632,465]
+counts1=[1551,1519,1633,1650,1660,1783,1843,1887,1936,1838,1748,1727,1460,1218,847,465]
+counts2=[1551,1487,1519,1604,1633,1705,1650,1752,1660,1791,1783,1845,1843,1925,1887,1869,1936,1838,1838,1761,1748,1730,1727,1513,1460,1217,1218,985,847,632,465]
 counts1=counts1[::-1]
 counts2=counts2[::-1]
 
@@ -37,9 +37,28 @@ plt.savefig('secondrun.pdf')
 
 
 plt.figure(3)
-plt.plot(Y,f(Y)*218.,'b-')
-error=np.sqrt(counts2)
-plt.errorbar(length2, counts2, yerr=error,fmt='g.',ecolor='green')
+def N(count,length):
+    return count/((8.932e-6)*f(length))
+
+print N(counts2,length2)
+N0=np.mean(N(counts2,length2))
+
+def N2(length):
+    return (8.932e-6)*N0*f(length)
+print len(N2(length2))
+
+plt.plot(Y,N2(Y),'r-',label=r'Calculated $N_2$')
+length2=length2-2.
+print length2
+#plt.plot(length2,counts2,'bo')
+plt.errorbar(length2, counts2, yerr=np.sqrt(counts2),fmt='b.',ecolor='blue', label=r'experimental $N_2$')
+plt.xlabel('Y (cm)')
+plt.ylabel('Counts/20 minutes')
+plt.legend(loc=4)
+plt.savefig('N2.pdf')
+plt.show()
+assert(False)
+
 
 
 #popt,pcov=scipy.optimize.curve_fit(f,length,counts2)
