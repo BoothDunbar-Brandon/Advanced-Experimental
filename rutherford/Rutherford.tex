@@ -13,7 +13,7 @@
 
 \header {\today}							
 \title{Rutherford Scattering}
-\author{Ekta Patel \& Brandon Booth-Dunbar}
+\author{Ekta "The Bomb" Patel \& Brandon Booth-Dunbar}
 
 \section{Abstract}
 \begin{em} In this lab, we verify the Rutherford formula for nuclear scattering in 1909. Their experiment led to the confirmation of the existence of an atomic nucleus, thus destroying the plum pudding model  developed by J. J. Thomson. Rutherford's team successfully disproved Thomson's model by observing a significant amount of charged alpha particles scattering back from a thin sheet of gold foil rather than passing through it with only a few deflections. Therefore, they were able to confirm that an atom consists of a dense nucleus surrounded by a less dense cloud of electrons surrounding the heavy nucleus, instead of an even distribution of mass throughout the atom. The distribution of alpha particles scattered by gold foil can be observed as a function of the scattering angle, which relies on the distance between the foil and the gold source. \end {em}
@@ -36,15 +36,45 @@ The scattering angle, $\theta$, varies with the changing distance $Y$ in the app
 \begin{equation} \label{complicated}N_2=N_0\times \left( \frac{nA_2Z^2z^2e^4}{R_1^2r_1^2 16 E^2}\right)\times \left(\frac{cos\theta_2 sin\theta_2^2}{sin(\theta/2)^4}\right) \end {equation}\\or more simply as\begin{equation}  \label{simple}N_2=N_0\times G\times f(Y). \end{equation} Here G is the atomic factor that accounts for the force between the gold atoms and the scattered alpha particles as they pass through the gold foil. Here, we take for granted that the solid angles we mention are averages and that the scattering center is an average scattering center since we do not know where on the surface area of the gold foil each, or most, of the alpha particles will pass through. 
 \section{Experimental Methods}
 \subsection{Apparatus}
+\indent \indent The experimental apparatus consists of a vacuum tube with a detector placed at one end and a plunger with a radioactive source placed at the other. the radioactive source used in this lab is Americium 241, it is highly radioactive so caution must be used at all times. The source can be moved over a range of roughly 20 cm in order to take measurements of scattering over a variety of scattering angles. It is important to note that moving the source over the 20 cm range is analogous to moving the detector over that range while leaving the source fixed.  The only reason that I point this out is because the lab manual for this experiment mixes up the source and detector multiple times.  To remain consistent with the resources given to us for this lab and the questions asked, including the results of Eq. 16 and Fig. 3, we will perform our analysis as though we are moving the detector.  This will not change our conclusion or results but will keep us consistent with the specific analysis asked for in the lab manual. The geometry of the figure is given below in Fig. 1 for reference.
+ 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=7in]{apparatus.png}
 \caption{Experimental geometry.}
 \end{center}
 \end{figure}
-\subsection{Procedures}
-\subsection{Calibration}
+
+\indent \indent The vacuum tube is connected to a pump which maintains a negative pressure of 30 $\pm$ 0.1 psi while data is being taken.  The detector is connected first to a pre-amplifier which boosts the signal before its arrival at a linear amplifier.  The amplified signal is then given to a discriminator which does not accept signals below a certain voltage, the calibration for the discriminator is given in the following section.  If the signal meets the discriminator voltage requirement it will be forwarded to a counter and recorded. This simple signal path can be seen below in Fig. 2 for reference.    
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=4.5in, angle=90]{Figure1Ap.pdf}
+\caption{Apparatus Signal Path}
+\end{center}
+\end{figure}
+
+\subsection{Preliminary}
+\indent \indent  Before beginning any experimentation there are three important things to keep in mind for the duration of the experiment. 
+\begin{enumerate}
+\item The source $^{241} Am$ is highly radioactive and should not be touched with bare hands or removed without proper tools and supervision. 
+\item All electronics must remain off until the vacuum tube is brought to the required pressure.  The detector is held at a potential such that if it were to be turned on in the presence of the number of particles at regular air pressure the sensitivity would be damaged permanently.
+\item When releasing the pressure from the vacuum tube (after turning off all the electronics) be very careful.  If the pressure is released too rapidly the rapid flow of air can not only tear the gold foil but also expunge radioactive debris from the source into the lab. 
+\end{enumerate}
+
+\subsection{Calibration \& Procedure}
+\indent \indent  To begin the calibration we obtained the Bismuth 83 source from the instructor and placed it in the extra vacuum tube provided. After gently removing the detector from the primary vacuum tube we transferred it;  placing the $^{83}Bi$ source as far away from the detector as possible while ensuring that it was still retrievable. After bringing the tube to the required pressure we turned on the electronics.  From here we started with the discriminator at the lowest setting and took a count of 5 minutes.  Using this as our baseline we increases the threshold of the discriminator until we began to see a decrease in counts greater than $\sqrt{N}$ where N is the number of counts.  Surprisingly we never saw a noticeable decrease even after bringing the discriminator to the largest possible threshold.  Usually this is an indicator that the amplifier is set too high but this is only a problem if we are additionally recording large background counts.  To test this we removed the radioactive source and performed 5 minute background counts.  Surprisingly enough we detected no more than 4 background counts which is extremely small compared to average count numbers in the hundreds.  
+
+\indent \indent Furthermore during this time the detector was horizontally placed, which subjects it to the maximum flux of cosmic ray background, which will be our primary source of interfering radiation.  In the experimental apparatus the detector will be place vertically and will therefore have even less exposure to background. Additionally the experimental tube is shielded more than the test tube used for calibration making the likelihood of recording background counts even smaller.  Since we could not calibrate the detector in the experimental tube and our experimental counts are all above 1000 we discount background as a source of error in our measurements since it would make up only a small fraction of a percent in our experimental counts.  
+
+\indent \indent After calibrating the discriminator we replaced the detector in its original position and brought the tube to the required psi before restarting the electronics. 
+
+
 \subsection{Recording Data}
+\indent \indent Before recording any data plot the test function $f(Y)$ as given in Eq. 16 so that you can ensure that the data you are taking matches the theory.  We chose an increment of 1 cm for our first run then increased our resolution by taking a second run at a 0.5 cm offset from our first run.  i.e. our first run of data was at integer points 1, 2, 3, 4... while our second set was at 0.5, 1.5, 2.5, ... . Once we took enough data we ensured that it met the test function and did our second run.  While students in past years have taken counts for upwards of 40 minutes we saw no reason to do such a thing when counts are already above 1000 for 20 minute intervals.  
+
+\indent \indent The only involved part of taking data is moving the plunger upon which the source is placed.  It is truly a two person process which even when done very carefully results in some uncertainty.  The plunger is held in place by a collar which you move every time you would like to start a new count.  A note of caution, the plunger is pulled inward by the pressure within the vacuum tube so ensure that you have a firm hold before removing the collar and adjusting its position. 
 
 \section{Results and Discussion}
 \subsection{The Scattering Angle Distribution}
@@ -90,7 +120,7 @@ After seeing a curve that represented the same shape as that of $f(Y)$, we went 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4in]{secondrun.pdf}
-\caption{The first run of data taken from 3cm to 18cm in intervals of 1cm combined  with an additional run with points taken in intervals of 0.5cm to obtain more statistics.}
+\caption{The first run of data taken from 3cm to 18cm in intervals of 1cm combined  with an additional run with points taken in intervals of 0.5cm to obtain greater resolution.}
 \end{center}
 \end{figure}
 
@@ -154,8 +184,12 @@ The upper limit on the nuclear radius of Gold is $2.7\times10^{-14}$m as calcula
 
 
 \section{Conclusion}
-%Brandon
+\subsection{Review of Results}
+\indent \indent Overall our results were very good with only slight deviation from expected values.  Our experimental data does not exactly match the calculated scattering curve which is most likely a result of our inability to accurately move the plunger.  While we did our best there are no markings on the plunger and it is difficult to tell how far you have really moved.  This is most likely the source of our seemingly symmetric drift above the calculated number of counts.
+\indent \indent  Outside of the error caused by the plunger we did not find any significant deviations in our data from what is to be expected and our results overall very much reflected the experimental goals set out in the lab manual.
 
+\subsection{Suggested Improvements}
+\indent \indent First and foremost, mark the plunger so that it is much easier to reliably measure the distance axis on our data.  While our official error is only 0.1 cm the real error caused by simple human clumsiness is most likely much greater.  The only other improvement that would be useful is to either make the foil more easily removable or make the test tube a more accurate representation of the experimental tube so that a reliable background can be taken. 
 
 \begin{thebibliography}{99}
 \bibitem{electron}Sleator, Tycho, and Windt, David, \begin{em}Rutherford Scattering. \end{em}Experimental Physics. V85.0112. Spring, 2011.
