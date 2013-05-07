@@ -42,7 +42,9 @@ def N(count,length):
 
 print N(counts2,length2)
 N0=np.mean(N(counts2,length2))
+print N0, np.std(N(counts2,length2))
 
+assert(False)
 def N2(length):
     return (8.932e-6)*N0*f(length)
 print len(N2(length2))
@@ -50,12 +52,15 @@ print len(N2(length2))
 plt.plot(Y,N2(Y),'r-',label=r'Calculated $N_2$')
 length2=length2-2.
 print length2
+print np.mean(N2(Y))
 #plt.plot(length2,counts2,'bo')
 plt.errorbar(length2, counts2, yerr=np.sqrt(counts2),fmt='b.',ecolor='blue', label=r'experimental $N_2$')
 plt.xlabel('Y (cm)')
 plt.ylabel('Counts/20 minutes')
 plt.legend(loc=4)
 plt.savefig('N2.pdf')
+
+
 plt.show()
 assert(False)
 

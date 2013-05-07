@@ -48,7 +48,7 @@ The scattering angle, $\theta$, varies with the changing distance $Y$ in the app
 
 \section{Results and Discussion}
 \subsection{The Scattering Angle Distribution}
-Using Equations \ref{simple} and \ref{complicated}, solving the equation for $f(Y)$ gives the angular distribution as a function of Y. We can plot $Y$ vs. $f(Y)$ for a range of 0 cm to 20 cm to get a curve that we can use to fit our experimental results. We solve for f(Y) in the following steps:
+Using Equations \ref{complicated} and \ref{simple}, solving for $f(Y)$ gives the angular distribution as a function of Y. We can plot $Y$ vs. $f(Y)$ for a range of 0 cm to 20 cm to get a curve that we can use to fit our experimental results. We solve for f(Y) in the following steps:
 \begin{equation} f(Y)=\frac{cos\theta_2 sin\theta_2^2}{sin(\theta/2)^4} \end{equation} where
 \begin{equation} \theta_1=tan^{-1}\left(\frac{r_1}{X}\right)\end{equation} and
 \begin{equation} \theta_2=tan^{-1}\left(\frac{r_1}{Y}\right)\end{equation} and
@@ -61,7 +61,7 @@ We know the following quantities as they are given in the lab manual because we 
 \begin{tabular}{|c|c|}\hline
 Quantity & Description \\ \hline 
 $r_s=0.32\pm0.01cm$ & radius of source\\ \hline 
-$X=7.22\pm0.01cm$ & source to plane of scattering foil\\ \hline
+$X=7.22\pm0.01cm$ & detector to plane of scattering foil\\ \hline
 $r_i=2.30cm$ & radius of the inside of the scattering foil\\ \hline
 $r_o=2.70cm$ & radius of the outside of the scattering foil\\ \hline
 $r_d=0.48cm$ & radius of the detector\\ \hline
@@ -79,7 +79,7 @@ Plotting this function for f(Y) over an interval of 0 to 20cm, we have:
 
 \subsection{Determining $G$ \& $N_0$}
 %EKTA FINISH THIS SECTION
-Figure 3 below shows our preliminary data set taken over a range from 3cm to 18cm in 1cm intervals. At each value for Y, the distance from the gold foil to the source, we counted for 20 minutes. Our data shows a peak around 10cm as opposed to the 8cm prediction given in the angular distribution plot above. It can be seen however, that the peak distance is relative to where on the apparatus one begins to record data. The axis on which we can move the source in an out of the apparatus chamber was measured to be 19.7cm$\pm$.01cm long. The length along this axis at which we choose to begin measurements however, is dependent on our gains for the linear amplifier in the electronic schematic of the apparatus, and therefore arbitrary to the length at which we make our zero reference point. Since we are able to tune our discriminator so that about 20\% of the alpha particles are rejected, our data is simply shifted along the $Y$ parameter by about 3 centimeters in the positive direction. 
+Figure 3 below shows our preliminary data set taken over a range from 3cm to 18cm in 1cm intervals. At each value for Y, the distance from the gold foil to the source, we counted for 20 minutes. Our data shows a peak around 10cm as opposed to the 8cm prediction given in the angular distribution plot above. It can be seen however, that the peak distance is relative to where on the apparatus one begins to record data. The axis on which we can move the source in an out of the apparatus chamber was measured to be 19.7cm$\pm$.01cm long. The length along this axis at which we choose to begin measurements however, is dependent on our gains for the linear amplifier in the electronic schematic of the apparatus, and therefore arbitrary to the length at which we make our zero reference point. 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4in]{firstrun.pdf}
@@ -121,7 +121,12 @@ $k$ & Coulomb's constant & $9\times10^9 N\cdot m/ C^2$\\ \hline
 \end{center}
 \end{table}
 Therefore, $G=8.932\times10^{-6}$. We cannot propagate error on the value for $G$ because the values that we are using are taken for granted since we cannot make our measurements of the apparatus that are inside the chamber. We can now use the calculated value for $G$, the angular distribution $f(Y)$ and the experimentally collected count rates, $N_2$ to determine $N_0$. 
-%%%%% error propagation, what do our results mean, anything else i forgot?
+\begin{equation} N_0=\frac{N_2}{f(Y)G}= 2.2509\times10^7\pm4.8028\times10^6\;particles/20\;minutes\end{equation} 
+Here we calculate the standard deviation by the following formula:
+\begin{equation} \sigma_{N_0}=\sqrt{\frac{1}{N}\Sigma (N_{average} - N_i)}=4.8028\times10^6\;particles/20\;minutes\end{equation}
+The value for $N_0$ should hypothetically be much higher than the values for $N_2$ that we are experimentally measuring because $N_0$ is the number of particles that the source is emitting directly, which is much more than what we measure for the counts as a function of distance from the source. Since the zero reference point of the length is arbitrary, we shift our length values by two centimeters to the left to arrive at results that correspond to our calculated curve. The most important comparison is how optimally our data follows the calculated curve, not how in or out of phase the curves are themselves. 
+
+%%%%% error propagation
 
 \begin{figure}[H]
 \begin{center}
@@ -129,6 +134,7 @@ Therefore, $G=8.932\times10^{-6}$. We cannot propagate error on the value for $G
 \caption{The calculated value for $N_2$ is shown in red, while our experimental value for $N_2$ is given in the blue data points with error bars corresponding to $\sqrt{\#\; of\; counts}$ per data point.}
 \end{center}
 \end{figure}
+Our experimental values tend to vary from the calculated rate of scattered particles mostly after the peak of the curves, which are about the same. The reason for this discrepancy at higher values for $Y$ is due to the fact that there is a higher chance of particles scattering off of the walls of the chamber and still making it though to the detector. Therefore, there is some over-counting that we see at values of $Y$ greater than about 8cm.
 
 \subsection{Finding the Atomic Number ($Z$)}
 The atomic number of gold, given by $Z$, cannot be found using our data because we would need to disassemble the apparatus and place the source right next to the detector in order to determine the proper value for $N_0$. $Z$ is a factor in $G$, so when we rearrange Equation \ref{simple} appropriately, we have: 
