@@ -28,15 +28,17 @@
 \end{equation}
 \indent \indent As with most decays we can describe the decay probability as a function of time using a negative exponential of the form:
 \begin{equation}
-P_{decay}(t) = A e^{-\alpha t}
+P_{decay}(t) = A e^{-\alpha t} + C
 \end{equation}
 \indent \indent \indent \indent where 
 \begin{equation}
 \alpha = \frac{1}{\tau}
 \end{equation}
+$\tau$ will be the mean lifetime of the decay particle. $A$ adjusts for the initial amplitude of the function depending on the data collected. $C$ will adjust for experimental background. 
+
 \indent \indent The flux per a unit area can also be calculated in this experiment and is found by a relation between the number of events detected and the total time detectors were running. Then adjust for the area of the detectors to obtain a base unit value. 
 \begin{equation}
-\frac{Total-Events}{Total-Time} X \frac{1}{Detector-Area} = \frac{Events}{Time-Area}
+\frac{Total\;Events}{Total\;Time}\; X\; \frac{1}{Detector\;Area} = \frac{Events}{Time\;Area}
 \end{equation}
 
 
@@ -45,7 +47,7 @@ P_{decay}(t) = A e^{-\alpha t}
 %Ekta, but I (Brandon)  will make the figures
 \subsection{Apparatus}
 \indent  \indent As a positively charged muon reaches the Earth and hits the scintillation detector, a small flash of light is observed due to the plastic sheet of the scintillator. The photomultiplier then changes the flash of light into a pulse of electrons which then travels to an amplifier/discriminator that filters away the noise from the detector in addition to strengthening the incoming pulse of electrons. The amplifier/discriminator then feeds the output pulse into the coincidence circuit to ensure that only the positrons and muon electrons are detected. 
-\newline \indent We want to start a clock when a positive muon is detected in the aluminum slab and stop the clock when the positron is detected from the muon decay. The distribution of a very large number of delay times, created by the `start' and `stop' of the detections, will be used to determine the lifetime of the muon. 
+\newline \indent We want to start a clock when a positive muon is detected in the aluminium slab and stop the clock when the positron is detected from the muon decay. The distribution of a very large number of delay times, created by the `start' and `stop' of the detections, will be used to determine the lifetime of the muon. 
 \newline \indent In our setup, we have three photomultipliers($A, B, C$), two of which will trap the muon long enough for it to decay and a third that will help in the detection of the positron. We use the $A$ and $B$ photomultipliers to detect and trap the muon. When $A$ and $B$ are triggered, but not C, the clock will start to count until either $B$ or $C$ is triggered again by the positron and stops the clock. We do not want all three photomultipliers to be triggered when the muon is detected because the time delay will be irrelevant since the clock will start and stop almost instantaneously. We need the muon to be trapped by two photomultipliers and the resulting positron to be detected by one of the photomultipliers. Therefore, the start and stops of the clock correspond to:
 \begin{equation} start: \textbf A\;and\; \textbf B \;sin\; \textbf C \end{equation}
 \begin{equation} stop: \textbf B\; or\; \textbf C \end{equation}
@@ -75,7 +77,7 @@ C & 1470 V & 420 & 80\\ \hline
 \end{center}
 \end{table}
 
-Data sets are taken on time scales of several days to a few weeks to obtain a result with reasonable precision. As discussed earlier, muons are not reaching the Earth at a very high rate, but furthermore, they are not being stopped in our apparatus 100\% of the time that they reach the ground. Therefore, longer time scales are more suitable to analyze the range of time delays that are used to determine the muon lifetime. After data has been obtained, it is important to calibrate the Time-Amplitude Converter to remove extraneous results that may be time delays that are too large to be feasible with the rest of the data set or even too small. The following table shows corresponding values for the amount of time lapsed in comparison to the matching bin number. The total number of bins observed with both the one week long and two week long data set is set to be 2048. Therefore, about 10\% of the total number of bins represent time delays of 1$\mu$s or less, whereas about 60\% of the bins correspond to time delays of 4$\mu$s or greater. 
+Data sets are taken on time scales of several days to a few weeks to obtain a result with reasonable precision. As discussed earlier, muons are not reaching the Earth at a very high rate, but furthermore, they are not being stopped in our apparatus 100\% of the time that they reach the ground. Therefore, longer time scales are more suitable to analyse the range of time delays that are used to determine the muon lifetime. After data has been obtained, it is important to calibrate the Time-Amplitude Converter to remove extraneous results that may be time delays that are too large to be feasible with the rest of the data set or even too small. The following table shows corresponding values for the amount of time lapsed in comparison to the matching bin number. The total number of bins observed with both the one week long and two week long data set is set to be 2048. Therefore, about 10\% of the total number of bins represent time delays of 1$\mu$s or less, whereas about 60\% of the bins correspond to time delays of 4$\mu$s or greater. 
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{|c|c|}\hline
@@ -101,9 +103,10 @@ Time & Bins\\ \hline
 \indent \indent In order to get the data ready for fitting we altered it in two ways:
 \begin{enumerate}
 \item There were a number of `dead' bins at the front of the data set which if left unaltered would skew the fit with outlier values.  In order to eliminate these bins we filtered our data for any bins in the first 200 that had corresponding count values of less than 10.  
-\item We then further eliminated outliers in the data by establishing a variability threshold of $\pm \frac{moving-average}{2}$.  The moving average was computed over the 10 surrounding values.  Both increasing  the number of values used to compute the moving average as well as increasing the factor on the bottom, making this a more stringent criteria.
+\item We then further eliminated outliers in the data by establishing a variability threshold of $\pm \frac{moving-average}{2}$.  The moving average was computed over the 10 surrounding values.  Both increasing  the number of values used to compute the moving average as well as increasing the factor on the bottom will make this a more stringent criteria.
 \end{enumerate}
-\indent \indent After filtering the values in this manner we then converted our bins to the correct time scale using our calibration data given in Table 2 and normalized the counts portion by dividing by the total number of counts in the data set for the reasons outlined at the beginning of this section. Using this data we performed our exponential fit, the results of which can be seen below. For documentation on how the fit is performed by the LabTools package please see the link in the References section.
+\indent \indent After filtering the values in this manner we then converted our bins to the correct time scale using our calibration data given in Table 2 and normalized the counts portion by dividing by the total number of counts in the data set for the reasons outlined at the beginning of this section. Using this data we performed our exponential fit using Eq. 2. Our fit parameters were the inverse of the mean lifetime of the particle ($\alpha$), the initial amplitude ($A$) and the background adjustment factor ($C$). The results of our fit can be seen below. For documentation on how the fit is performed by the LabTools package please see the link in the References section \cite{LabTools}.
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=4 in]{graph_EPBB1_SnglExp.png}
@@ -118,9 +121,24 @@ Time & Bins\\ \hline
 \end{center}
 \end{figure}
 
-From the graphs above we can find the decay time from Eq. 3. For the first data set we found a mean lifetime of 2.178 $\mu s$ and for the second data set we found a mean lifetime of 2.272 $\mu s$.  The error on this value is given as extraordinarily large, more than a 1000x the actual value but this is more a result of the fitting process than a real representation of experimental error.  It is instead more beneficial to explore the $\chi^2$ value of the fit for an indicator of error in our functional form and fit choice.  The $\chi^2$ significance value for the first set of data is $8.12 x 10^-5$ while the $\chi^2$ for the second set of data is $7.78 x 10^-5$. The $\chi^2$ significance value tells us to what probability we can say that our fit is correct, the smaller the $\chi^2$ significance the better the fit describes the data. As you can see our extraordinarily small values show that our fit choice both in functional form and in the results themselves are very suited to the data we have gathered. 
+From the graphs above we can find the decay time from Eq. 3. For the first data set we found a mean lifetime of 2.09705$\mu s \pm 2.12423 \mu s$ and for the second data set we found a mean lifetime of 2.0453 $
+\mu s \pm 2.10432 \mu s$.The error on these values is large but this is more a result of the nature of an exponential fit than a real representation of the error.  A much better indicator of the "Goodness of Fit" is the $\chi^2$ level of significance.  This is a statistical tool used to   either reject or accept the fit given. It tests the two hypothesises against each other.\\
+\indent \indent $H_0 $: Our parameter values are the true values of the data set.\\
+\indent \indent $H_1$: Any other value is the true value of the data set.\\
+ For both of our fits the $\chi^2$ significance is at the 77 \% confidence level.  This means that we can accept our $H_0$ hypothesis with this level of confidence.  While this is not great it was the highest level of confidence we were able to achieve.  This is most likely a result of the nature of exponential fits which as opposed to linear fits or unique functions with one or more critical points allow for many similar values to satisfy the fit algorithms requirements.
+ 
+\indent \indent In addition to the lifetime, one of the pertinent fit values is the background parameter C. For our first set of data we found the background to be about 0.0036\% of the total events recorded and for our second set of data we found our background to be 0.0038\% of all events recorded. This is an extraordinary small value and is nearly inconsequential in our data analysis. In further analysis we can increase our $\chi^2$ by subtracting this background from the data set and subsequently eliminate C from our fit parameters. 
 
-\indent \indent The lab manual asks us to calculate the flux per square centimetre  at sea level which we can do for the first set of data since the total run time vs. number of events is known but we cannot find this for the second set of data because we are not sure at which time the apparatus reached the maximum number of events it could record.  Using Eq. 4 we find that with 23315 total events and 10,020 min total runtime over an area of AREA OF DETECTOR, the flux at sea level is roughly NUMBER.  
+\indent \indent The lab manual asks us to calculate the flux per square centimetre  at sea level which we can do for the first set of data since the total run time vs. number of events is known but we cannot find this for the second set of data because we are not sure at which time the apparatus reached the maximum number of events it could record.  Using Eq. 4 and the parameters below we can find the flux detected at sea level.\\
+\indent\indent 23315 total events \\
+\indent \indent 10,020 min total runtime \\
+\indent \indent 3782$ cm^2$ effective detector area. \\
+The detected flux in the laboratory is  then roughly 0.00062 events/$cm^2$/min.  This is not anywhere near the accepted flux value at sea level of about 1 event/$cm^2$/min but should not be too concerning because it simply means that our detector does not detect all of the events at sea level. There are several clear reasons for this which are summarized in the list below.
+\begin{itemize}
+\item The coincidence requirements we have set limit the events we detect to a much smaller sample size. 
+\item The effectiveness of the detector varies across its area.
+\item We are on the third floor of a large cement and metal structure which may shield a large number of the incident muon shower at sea level. 
+\end{itemize} 
 
 
 \section{Additional Analysis \& Conclusion}
@@ -129,7 +147,13 @@ From the graphs above we can find the decay time from Eq. 3. For the first data 
 	\mu^- \rightarrow e^- + \nu_e + \bar{\nu_e}
 \end{equation}
 
-\indent \indent We can account for this second decay mode by fitting a double exponential instead of a single exponential to our data.  We did this for both data sets, the figures can be seen below.  In addition to the data fit we added an `ideal' fit using accepted ratios for positive to negative muon decay.  
+\indent \indent We can account for this second decay mode by fitting a double exponential instead of a single exponential to our data.  We did this for both data sets, the figures can be seen below. The equation we are fitting for the double exponential is:
+\begin{equation}
+P(t) = Ae^{-\alpha t} + Be^{-\beta t} + C
+\end{equation}
+There are five fit parameters; A and B adjust for the amplitude of the exponential, $\alpha$ and $\beta$ are the inverse of the mean lifetime and C adjusts for background in our measurements. We fit the inverse mean lifetime because it allows for the function to be better defined computationally as well as making the exponential neat by not allowing for division by zero in the argument of the exponential. The initial values for the fit greatly affect the outcome, we attempted many different values but the most successful initial parameters which maximized the $\chi^2$ significance of the data were $\tau = 2.2 \mu s$, $\tau_- = 0.5 \mu s$ and $\tau_+ = 2.2 \mu s$. In a more rigorous examination of the data one would write a routine to maximize $\chi^2$ significance automatically and in a more comprehensive fashion but given the fact we are only analysing two data sets, the guess and check method is perfectly suitable. 
+
+\indent \indent Fig. 4 and Fig. 5 shown below compare the double exponential v. the single exponential fit and shows the calculated mean decay times.  As you can see the functional form is not graphically very different but the decay times are significantly different.  It should be noted that the uncertainty in the double exponential fit values is enormously large.  This is because there are a large variety of linear combinations of exponentials which can satisfy the needed functional form.  The error is so large as to make the values given in the graphs statistically insignificant. This should be treated merely as an exercise since from our perspective positive and negative muons are not well differentiated in our data set. Without the foresight of knowing that there are two different decay modes being observed our experimental analysis would not allow us to be confident that our double exponential fit was meaningful.    
 
 \begin{figure}[H]
 \begin{center}
@@ -143,11 +167,9 @@ From the graphs above we can find the decay time from Eq. 3. For the first data 
 \includegraphics[width=4 in]{graph_EPBB2_DbleExp.png}
 \caption{Data Set 2 Double V. Single Exponential Fit}
 \end{center}
-\end{figure}
+\end{figure} 
 
-\indent \indent The $\chi^2$ improved by $0.07 x 10^-5$  for the first set of data and $0.02 x 10^-5$. This improvement may not seem very large but considering the size of our original answer this is a good improvement. 
-
-\indent \indent In order to emphasize the importance of including both decay paths in our fit the figures below separate out the respective contributions to our fit from the positive and negative muon decays. 
+\indent \indent In order to emphasize the importance of including both decay paths in our fit Fig. 6 and Fig. 7 separate out the respective contributions to our fit from the positive and negative muon decays. 
 
 \begin{figure}[H]
 \begin{center}
@@ -163,15 +185,16 @@ From the graphs above we can find the decay time from Eq. 3. For the first data 
 \end{center}
 \end{figure}
 
-As can be seen from the above figures the positive muon decay is dominant in the shorter decay times while the negative muon due to absorption into the aluminium atom is dominant in the longer decay times.  
+As can be seen from the above figures the positive muon decay is dominant in the longer decay times while the negative muon due to absorption into the aluminium atom is dominant in the shorter decay times.  
 
+The full fitting routine is available online at the GitHub repository provided in the references section  \cite{Fitting}.
 
-%Ekta
-% final time
-%how errors could be minimized or eliminated.
 
 \begin{thebibliography}{99}
 \bibitem{electron}Sleator, Tycho, and Budick, Burton, \begin{em}Muon Lifetime. \end{em}Experimental Physics. V85.0112. Spring, 2012.
+\bibitem{LabTools} LabTools Public Documentation -  \emph{http://wanda.fiu.edu/boeglinw/LabTools/doc/index.html}
+\bibitem{Fitting} \emph{http://www.github.com} 
+\\     User: BoothDunbar-Brandon \\       Public Repository: Advanced-Experimental/muon-lifetime/smartmuon.py
 \end{thebibliography}
 
 \newpage \LARGE{Appendix}

@@ -11,8 +11,6 @@ import sys
 import os
 
 #Prompts user for initial start values of parameters used later 
-# For data set 1 used 2.2, 2.2, 0.5
-# For data se 2 used 2.2, 4, 0.5
 print("Please enter all values in microseconds")
 lambda1_start = 1./float(raw_input("Enter a starting guess for the mean lifetime of a muon: "))
 l1_start = 1.
