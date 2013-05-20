@@ -8,7 +8,7 @@ def f(Y):
     b=r1**2/(Y**2+r1**2)
     X=7.22
     return a*b/np.sin(0.5*(np.arctan(r1/X)+np.arctan(r1/Y)))**4
-Y=np.arange(0,20,.01)
+Y=np.arange(0.01,20,.01)
 print max(f(Y))
 
 length1=np.arange(3,19,1.0)
@@ -54,7 +54,7 @@ length2=length2-2.
 print length2
 print np.mean(N2(Y))
 #plt.plot(length2,counts2,'bo')
-plt.errorbar(length2, counts2, yerr=np.sqrt(counts2),fmt='b.',ecolor='blue', label=r'experimental $N_2$')
+plt.errorbar(length2, counts2, yerr=np.sqrt(counts2), xerr= 0.1, fmt='b.',ecolor='blue', label=r'experimental $N_2$')
 plt.xlabel('Y (cm)')
 plt.ylabel('Counts/20 minutes')
 plt.legend(loc=4)
@@ -62,7 +62,7 @@ plt.savefig('N2.pdf')
 
 
 plt.show()
-assert(False)
+
 
 
 
